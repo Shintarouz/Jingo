@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://u7x670nudcup"]
+
+[ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_0rxj2"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_qttxf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mh1p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yobv8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0poft"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70mbc"]
+
+[node name="victory_screen" type="Node2D"]
+script = ExtResource("1_0rxj2")
+
+[node name="background" parent="." instance=ExtResource("1_qttxf")]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(1080, 2400)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -466.0
+offset_top = -734.0
+offset_right = 466.0
+offset_bottom = 734.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+text = "Omedeto!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu_button_1" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8mh1p")
+text = "Hiragana"
+
+[node name="menu_button_2" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yobv8")
+text = "Katakana"
+
+[node name="menu_button_3" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0poft")
+text = "Kanji"
+
+[node name="menu_button_4" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/focus = SubResource("StyleBoxEmpty_70mbc")
+text = "Vocab"
+
+[node name="menu_button_5" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/focus = SubResource("StyleBoxEmpty_70mbc")
+text = "Main Menu"
+
+[connection signal="pressed" from="Control/VBoxContainer/menu_button_1" to="." method="_on_hiragana_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/menu_button_2" to="." method="_on_katakana_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/menu_button_3" to="." method="_on_kanji_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/menu_button_4" to="." method="_on_vocab_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/menu_button_5" to="." method="_on_main_menu_pressed"]

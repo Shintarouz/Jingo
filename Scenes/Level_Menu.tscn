@@ -1,0 +1,1355 @@
+[gd_scene load_steps=31 format=3 uid="uid://wsqm8vkd045j"]
+
+[ext_resource type="Script" path="res://Scripts/Level_Menu.gd" id="1_anjq2"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_fv2qr"]
+[ext_resource type="Texture2D" uid="uid://cvcqbsii03f0h" path="res://Assets/sakura-background-slduycq4iy8xqie1.webp" id="3_dvqwp"]
+[ext_resource type="StyleBox" uid="uid://bd8gpdcq1ne6d" path="res://Assets/Tres/HiraButtons/Hira_Gradient.tres" id="4_leepn"]
+[ext_resource type="StyleBox" uid="uid://h7sk5emm7dn1" path="res://DelFolder/Icon_Button_Normal.tres" id="5_lh7x1"]
+[ext_resource type="StyleBox" uid="uid://doti71mshbyk7" path="res://DelFolder/Icon_Button_Hover.tres" id="6_44qk6"]
+[ext_resource type="StyleBox" uid="uid://bpwtnu2e7uv18" path="res://DelFolder/Icon_Button_Pressed.tres" id="7_x2jei"]
+[ext_resource type="StyleBox" uid="uid://d1pptm31uqwra" path="res://Assets/Tres/HiraButtons/Hira_Progressbar_Bg.tres" id="8_lyx6v"]
+[ext_resource type="StyleBox" uid="uid://cdqm4sbk6c4s8" path="res://Assets/Tres/HiraButtons/Hira_Progressbar_Fill.tres" id="9_d1t6c"]
+[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="10_mwqni"]
+[ext_resource type="StyleBox" uid="uid://decp6r3a3avb1" path="res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres" id="11_jvs6w"]
+[ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="12_gp7cv"]
+[ext_resource type="StyleBox" uid="uid://bslup4t56dl24" path="res://Assets/Tres/TemplateButtons/Disabled_Button_N.tres" id="13_s1p7r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixefr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xr8jf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q4jg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8ekj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ofnho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_770dn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_the4a"]
+bg_color = Color(0.956863, 0.658824, 0.788235, 0.4)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.666667, 0.666667, 0.666667, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_he7i7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37kly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uts5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3pj3v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85sll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5df1c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udbyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyuql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yni15"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pfiih"]
+bg_color = Color(0.956863, 0.658824, 0.788235, 0)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_anjq2")
+
+[node name="OG" type="Panel" parent="."]
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="background" parent="OG" instance=ExtResource("2_fv2qr")]
+
+[node name="Sakura-background-slduycq4Iy8Xqie1" type="Sprite2D" parent="OG"]
+visible = false
+position = Vector2(872, 1176)
+scale = Vector2(2.10059, 2.10059)
+texture = ExtResource("3_dvqwp")
+
+[node name="NavBarBottom" type="Panel" parent="OG"]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = -280.0
+offset_right = 540.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("4_leepn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OG/NavBarBottom"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 280.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_1" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ixefr")
+text = "あ"
+
+[node name="Control2" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_2" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xr8jf")
+text = "ア"
+
+[node name="Control3" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_3" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control3"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2q4jg")
+text = "漢字"
+
+[node name="Control4" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_4" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control4"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c8ekj")
+text = "語彙"
+
+[node name="NavBarTop" type="Panel" parent="OG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -540.0
+offset_right = 540.0
+offset_bottom = 240.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("4_leepn")
+
+[node name="ProgressBar" type="ProgressBar" parent="OG/NavBarTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = -24.0
+offset_right = -44.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_styles/background = ExtResource("8_lyx6v")
+theme_override_styles/fill = ExtResource("9_d1t6c")
+value = 55.96
+show_percentage = false
+
+[node name="Back_Button" type="Button" parent="OG/NavBarTop"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -80.0
+offset_right = -40.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ofnho")
+text = "Back"
+
+[node name="Label" type="Label" parent="OG/NavBarTop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -80.0
+offset_right = 236.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = ExtResource("10_mwqni")
+text = "¥100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="OG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.185185
+anchor_top = 0.0666667
+anchor_right = 0.814815
+anchor_bottom = 0.873333
+offset_left = -180.0
+offset_top = 79.9999
+offset_right = 180.0
+offset_bottom = 24.001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_770dn")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OG/ScrollContainer2"]
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Chapter_1" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="OG/ScrollContainer2/VBoxContainer/Chapter_1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 12.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+text = "Chapter 1 - Hiragana"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Border" type="Panel" parent="OG/ScrollContainer2/VBoxContainer/Chapter_1"]
+layout_mode = 2
+offset_top = 192.0
+offset_right = 1040.0
+offset_bottom = 3344.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_the4a")
+
+[node name="Empty_Node_1" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_1" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_1"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("10_mwqni")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_he7i7")
+text = "あ"
+
+[node name="Button" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_1"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+text = "Hiragana Tak"
+
+[node name="Empty_Node_2" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_2" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -100.0
+offset_right = -420.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37kly")
+text = "か"
+
+[node name="Empty_Node_3" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_3" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_3"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -100.0
+offset_right = 380.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uts5g")
+text = "さ"
+
+[node name="Empty_Node_4" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_4" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_4"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = -100.0
+offset_right = 620.0
+offset_bottom = 100.0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj3v")
+text = "た"
+
+[node name="Empty_Node_5" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_5" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_5"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85sll")
+text = "な"
+
+[node name="Empty_Node_6" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_6" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_6"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -100.0
+offset_right = -420.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5df1c")
+text = "は"
+
+[node name="Empty_Node_7" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_7" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_7"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -100.0
+offset_right = 380.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_udbyv")
+text = "ま"
+
+[node name="Empty_Node_8" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_8" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_8"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = -100.0
+offset_right = 620.0
+offset_bottom = 100.0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyuql")
+text = "や"
+
+[node name="Empty_Node_9" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_9" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_9"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
+text = "ら"
+
+[node name="Empty_Node_10" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_10" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_10"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
+text = "わ"
+
+[node name="Chapter_2" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="OG/ScrollContainer2/VBoxContainer/Chapter_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 12.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_pfiih")
+text = "Chapter 2 - Hiragana"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Border" type="Panel" parent="OG/ScrollContainer2/VBoxContainer/Chapter_2"]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 1040.0
+offset_bottom = 3344.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_the4a")
+
+[node name="Empty_Node_11" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_1" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_11"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("10_mwqni")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_he7i7")
+text = "あ"
+
+[node name="Button" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_11"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+text = "Hiragana Tak"
+
+[node name="Empty_Node_12" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_2" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_12"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -100.0
+offset_right = -420.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37kly")
+text = "か"
+
+[node name="Empty_Node_13" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_3" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_13"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -100.0
+offset_right = 380.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uts5g")
+text = "さ"
+
+[node name="Empty_Node_14" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_4" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_14"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = -100.0
+offset_right = 620.0
+offset_bottom = 100.0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj3v")
+text = "た"
+
+[node name="Empty_Node_15" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_5" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_15"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85sll")
+text = "な"
+
+[node name="Empty_Node_16" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_6" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_16"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -100.0
+offset_right = -420.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5df1c")
+text = "は"
+
+[node name="Empty_Node_17" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_7" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_17"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -100.0
+offset_right = 380.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_udbyv")
+text = "ま"
+
+[node name="Empty_Node_18" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_8" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_18"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = -100.0
+offset_right = 620.0
+offset_bottom = 100.0
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yyuql")
+text = "や"
+
+[node name="Empty_Node_19" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_9" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_19"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -100.0
+offset_right = -180.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
+text = "ら"
+
+[node name="Empty_Node_20" type="Control" parent="OG/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1040, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+
+[node name="Level_Button_10" type="Button" parent="OG/ScrollContainer2/VBoxContainer/Empty_Node_20"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("10_mwqni")
+theme_override_styles/hover = ExtResource("11_jvs6w")
+theme_override_styles/pressed = ExtResource("12_gp7cv")
+theme_override_styles/disabled = ExtResource("13_s1p7r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
+text = "わ"
+
+[node name="Panels" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 40.0
+
+[node name="Panel2" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 80.0
+
+[node name="Panel21" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 80.0
+offset_bottom = 240.0
+
+[node name="Panel23" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 240.0
+offset_right = 80.0
+offset_bottom = 280.0
+
+[node name="Panel24" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 280.0
+offset_right = 40.0
+offset_bottom = 320.0
+
+[node name="Panel22" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 40.0
+offset_bottom = 200.0
+
+[node name="Panel3" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_right = 1040.0
+offset_bottom = 40.0
+
+[node name="Panel5" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 200.0
+offset_right = 1040.0
+offset_bottom = 240.0
+
+[node name="Panel7" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 240.0
+offset_right = 1040.0
+offset_bottom = 280.0
+
+[node name="Panel8" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 280.0
+offset_right = 1080.0
+offset_bottom = 320.0
+
+[node name="Panel9" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 2080.0
+offset_right = 1040.0
+offset_bottom = 2120.0
+
+[node name="Panel11" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 2120.0
+offset_right = 1040.0
+offset_bottom = 2160.0
+
+[node name="Panel15" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 2120.0
+offset_right = 80.0
+offset_bottom = 2160.0
+
+[node name="Panel17" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 2360.0
+offset_right = 80.0
+offset_bottom = 2400.0
+
+[node name="Panel18" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 2320.0
+offset_right = 40.0
+offset_bottom = 2360.0
+
+[node name="Panel19" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 2080.0
+offset_right = 80.0
+offset_bottom = 2120.0
+
+[node name="Panel20" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 2040.0
+offset_right = 40.0
+offset_bottom = 2080.0
+
+[node name="Panel16" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_top = 2160.0
+offset_right = 40.0
+offset_bottom = 2200.0
+
+[node name="Panel12" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 2160.0
+offset_right = 1080.0
+offset_bottom = 2200.0
+
+[node name="Panel13" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 2320.0
+offset_right = 1080.0
+offset_bottom = 2360.0
+
+[node name="Panel14" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 2360.0
+offset_right = 1040.0
+offset_bottom = 2400.0
+
+[node name="Panel10" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 2040.0
+offset_right = 1080.0
+offset_bottom = 2080.0
+
+[node name="Panel4" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 40.0
+offset_right = 1080.0
+offset_bottom = 80.0
+
+[node name="Panel6" type="Panel" parent="Panels"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 160.0
+offset_right = 1080.0
+offset_bottom = 200.0
+
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control/Alpha_Button_1" to="." method="_on_hiragana_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control2/Alpha_Button_2" to="." method="_on_katakana_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control3/Alpha_Button_3" to="." method="_on_kanji_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control4/Alpha_Button_4" to="." method="_on_vocab_button_pressed"]
+[connection signal="pressed" from="OG/NavBarTop/Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1" to="." method="_on_level_button_1_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2" to="." method="_on_level_button_2_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3" to="." method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4" to="." method="_on_level_button_4_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5" to="." method="_on_level_button_5_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6" to="." method="_on_level_button_6_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7" to="." method="_on_level_button_7_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8" to="." method="_on_level_button_8_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9" to="." method="_on_level_button_9_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10" to="." method="_on_level_button_10_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_11/Level_Button_1" to="." method="_on_level_button_1_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_11/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_12/Level_Button_2" to="." method="_on_level_button_2_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_13/Level_Button_3" to="." method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_14/Level_Button_4" to="." method="_on_level_button_4_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_15/Level_Button_5" to="." method="_on_level_button_5_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_16/Level_Button_6" to="." method="_on_level_button_6_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_17/Level_Button_7" to="." method="_on_level_button_7_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_18/Level_Button_8" to="." method="_on_level_button_8_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_19/Level_Button_9" to="." method="_on_level_button_9_pressed"]
+[connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_20/Level_Button_10" to="." method="_on_level_button_10_pressed"]

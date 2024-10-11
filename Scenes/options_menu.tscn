@@ -1,0 +1,152 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca63hpvrdexs2"]
+
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_sq4ua"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_ahm3x"]
+
+[node name="options_menu" type="Node2D"]
+script = ExtResource("1_sq4ua")
+
+[node name="background" parent="." instance=ExtResource("2_ahm3x")]
+
+[node name="ColorRect1" type="ColorRect" parent="."]
+offset_left = 248.0
+offset_top = 440.0
+offset_right = 398.0
+offset_bottom = 590.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 94.0
+offset_top = 442.0
+offset_right = 244.0
+offset_bottom = 592.0
+
+[node name="Back" type="Button" parent="."]
+offset_left = 752.0
+offset_top = 80.0
+offset_right = 1002.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 85
+text = "back"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 93.0
+offset_top = 442.0
+offset_right = -93.0
+offset_bottom = -424.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control2/VBoxContainer/Control"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+offset_left = 317.0
+offset_right = 893.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 85
+text = "Furigana Option"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/VBoxContainer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FuriganaOnButton" type="Button" parent="Control2/VBoxContainer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "on"
+
+[node name="FuriganaOffButton" type="Button" parent="Control2/VBoxContainer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "off"
+
+[node name="Control2" type="Control" parent="Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control2/VBoxContainer/Control2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+offset_left = 322.0
+offset_right = 893.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.270588, 0.278431, 0.890196, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 85
+text = "Romaji Option"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/VBoxContainer/Control2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OnButton" type="Button" parent="Control2/VBoxContainer/Control2/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "on"
+
+[node name="OffButton" type="Button" parent="Control2/VBoxContainer/Control2/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "off"
+
+[node name="Control3" type="Control" parent="Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control2/VBoxContainer/Control3"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+offset_left = 743.0
+offset_right = 893.0
+offset_bottom = 150.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/VBoxContainer/Control3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OnButton" type="Button" parent="Control2/VBoxContainer/Control3/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "on"
+
+[node name="OffButton" type="Button" parent="Control2/VBoxContainer/Control3/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "off"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control/HBoxContainer/FuriganaOnButton" to="." method="_on_furigana_on_button_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control/HBoxContainer/FuriganaOffButton" to="." method="_on_furigana_off_button_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control2/HBoxContainer/OnButton" to="." method="_on_on_button_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control2/HBoxContainer/OffButton" to="." method="_on_off_button_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control3/HBoxContainer/OnButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Control3/HBoxContainer/OffButton" to="." method="_on_button_pressed"]

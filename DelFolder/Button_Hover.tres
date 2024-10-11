@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://bee2rv61iabob"]
+
+[resource]
+bg_color = Color(0.862745, 0, 0.211765, 1)
+border_width_bottom = 16
+border_color = Color(0.568627, 0, 0.12549, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50

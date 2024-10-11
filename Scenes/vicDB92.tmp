@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://u7x670nudcup"]
+
+[ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_0rxj2"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_qttxf"]
+
+[node name="victory_screen" type="Node2D"]
+script = ExtResource("1_0rxj2")
+
+[node name="background" parent="." instance=ExtResource("1_qttxf")]
+
+[node name="Back" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 54.0
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

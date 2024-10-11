@@ -1,0 +1,373 @@
+[gd_scene load_steps=11 format=3 uid="uid://2gygja27tl0m"]
+
+[ext_resource type="Script" path="res://Scripts/hiragana.gd" id="1_wrbyw"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_03xdt"]
+[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="3_d0omu"]
+[ext_resource type="StyleBox" uid="uid://decp6r3a3avb1" path="res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres" id="4_fkddu"]
+[ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="5_tvsq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xarxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmaq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xkarn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csvd4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3drps"]
+
+[node name="hiragana" type="Node2D"]
+script = ExtResource("1_wrbyw")
+
+[node name="background" parent="." instance=ExtResource("2_03xdt")]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 96.0
+offset_top = 80.0
+offset_right = 1016.0
+offset_bottom = 1872.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 5
+
+[node name="a_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("3_d0omu")
+theme_override_styles/hover = ExtResource("4_fkddu")
+theme_override_styles/pressed = ExtResource("5_tvsq2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xarxp")
+
+[node name="i_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("3_d0omu")
+theme_override_styles/hover = ExtResource("4_fkddu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vmaq0")
+
+[node name="u_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("3_d0omu")
+theme_override_styles/hover = ExtResource("4_fkddu")
+theme_override_styles/pressed = ExtResource("5_tvsq2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xkarn")
+
+[node name="e_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("3_d0omu")
+theme_override_styles/hover = ExtResource("4_fkddu")
+theme_override_styles/pressed = ExtResource("5_tvsq2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_csvd4")
+
+[node name="o_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("3_d0omu")
+theme_override_styles/hover = ExtResource("4_fkddu")
+theme_override_styles/pressed = ExtResource("5_tvsq2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3drps")
+
+[node name="ka_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ki_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ku_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ke_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ko_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="sa_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="shi_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="su_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="se_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="so_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ta_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="chi_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="tsu_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="te_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="to_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="na_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ni_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="nu_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ne_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="no_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ha_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="hi_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="fu_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="he_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ho_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ma_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="mi_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="mu_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="me_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="mo_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ya_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="Control" type="Control" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="yu_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="Control2" type="Control" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="yo_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ra_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ri_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ru_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="re_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="ro_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="wa_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="Control3" type="Control" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="n_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="Control4" type="Control" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+
+[node name="wo_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+
+[node name="start_game" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 1944.0
+offset_right = 984.0
+offset_bottom = 2120.0
+theme_override_font_sizes/font_size = 85
+text = "Start Game"
+
+[node name="back" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 2144.0
+offset_right = 984.0
+offset_bottom = 2320.0
+theme_override_font_sizes/font_size = 85
+text = "Back"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 152.0
+offset_right = 88.0
+offset_bottom = 223.0
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/a_button" to="." method="_on_a_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/i_button" to="." method="_on_i_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/u_button" to="." method="_on_u_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/e_button" to="." method="_on_e_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/o_button" to="." method="_on_o_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ka_button" to="." method="_on_ka_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ki_button" to="." method="_on_ki_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ku_button" to="." method="_on_ku_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ke_button" to="." method="_on_ke_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ko_button" to="." method="_on_ko_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/sa_button" to="." method="_on_sa_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/shi_button" to="." method="_on_shi_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/su_button" to="." method="_on_su_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/se_button" to="." method="_on_se_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/so_button" to="." method="_on_so_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ta_button" to="." method="_on_ta_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/chi_button" to="." method="_on_chi_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/tsu_button" to="." method="_on_tsu_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/te_button" to="." method="_on_te_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/to_button" to="." method="_on_to_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/na_button" to="." method="_on_na_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ni_button" to="." method="_on_ni_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/nu_button" to="." method="_on_nu_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ne_button" to="." method="_on_ne_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/no_button" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ha_button" to="." method="_on_ha_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/hi_button" to="." method="_on_hi_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/fu_button" to="." method="_on_fu_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/he_button" to="." method="_on_he_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ho_button" to="." method="_on_ho_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ma_button" to="." method="_on_ma_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/mi_button" to="." method="_on_mi_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/mu_button" to="." method="_on_mu_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/me_button" to="." method="_on_me_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/mo_button" to="." method="_on_mo_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ya_button" to="." method="_on_ya_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/yu_button" to="." method="_on_yu_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/yo_button" to="." method="_on_yo_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ra_button" to="." method="_on_ra_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ri_button" to="." method="_on_ri_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ru_button" to="." method="_on_ru_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/re_button" to="." method="_on_re_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ro_button" to="." method="_on_ro_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/wa_button" to="." method="_on_wa_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/n_button" to="." method="_on_n_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/wo_button" to="." method="_on_wo_button_pressed"]
+[connection signal="pressed" from="start_game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b78h2t3hvwijs"]
+
+[ext_resource type="Texture2D" uid="uid://biljcxdfwpcgf" path="res://Assets/background 2.png" id="1_bx751"]
+[ext_resource type="Texture2D" uid="uid://cvcqbsii03f0h" path="res://Assets/sakura-background-slduycq4iy8xqie1.webp" id="2_evfjk"]
+[ext_resource type="Texture2D" uid="uid://dge1qn4dg21ma" path="res://Assets/test_underscale.png" id="3_4k24q"]
+
+[node name="background" type="Node2D"]
+
+[node name="Background2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-286, -48)
+scale = Vector2(2.4184, 2.4184)
+texture = ExtResource("1_bx751")
+centered = false
+
+[node name="Sakura-background-slduycq4Iy8Xqie1" type="Sprite2D" parent="."]
+position = Vector2(872, 1176)
+scale = Vector2(2.10059, 2.10059)
+texture = ExtResource("2_evfjk")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="TestUnderscale" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(540.75, 1201)
+scale = Vector2(7.98889, 7.99333)
+texture = ExtResource("3_4k24q")

@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://c2a3gplkoq22d"]
+
+[sub_resource type="Gradient" id="Gradient_assit"]
+colors = PackedColorArray(0.964706, 0.658824, 0.776471, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ay5uu"]
+gradient = SubResource("Gradient_assit")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[resource]
+texture = SubResource("GradientTexture2D_ay5uu")
+modulate_color = Color(0.937255, 0.890196, 0.133333, 1)

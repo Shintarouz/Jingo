@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://2jyec7ub4po7"]
+
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_hgfe3"]
+[ext_resource type="Script" path="res://Scripts/mode_menu.gd" id="1_v88fc"]
+
+[node name="mode_menu" type="Node2D"]
+script = ExtResource("1_v88fc")
+
+[node name="background" parent="." instance=ExtResource("1_hgfe3")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 71.0
+offset_top = 115.0
+offset_right = 215.0
+offset_bottom = 159.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Hiragana" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "Hiragana"
+
+[node name="Katakana" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "Katakana"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "JLPT N5"
+
+[node name="Kanji" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "Kanji"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 18.0
+offset_top = 456.0
+offset_right = 275.0
+offset_bottom = 504.0
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Hiragana" to="." method="_on_hiragana_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Katakana" to="." method="_on_katakana_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Kanji" to="." method="_on_kanji_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1tq7v0kk2qt7"]
+
+[ext_resource type="Script" path="res://Scripts/katakana_game_scripts/aiueo_game_katakana.gd" id="1_e5t0y"]
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_lmgfy"]
+
+[node name="aiueo_game_katakana" type="Node2D"]
+script = ExtResource("1_e5t0y")
+
+[node name="background" parent="." instance=ExtResource("2_lmgfy")]
+
+[node name="Back" type="Button" parent="."]
+offset_left = 752.0
+offset_top = 80.0
+offset_right = 1002.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 85
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -88.0
+offset_top = 280.0
+offset_right = 1162.0
+offset_bottom = 930.0
+theme_override_font_sizes/font_size = 250
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerDisplay" type="Label" parent="."]
+offset_left = 190.0
+offset_top = 816.0
+offset_right = 940.0
+offset_bottom = 966.0
+theme_override_font_sizes/font_size = 85
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect1" type="ColorRect" parent="."]
+visible = false
+offset_left = 184.0
+offset_top = 1048.0
+offset_right = 934.0
+offset_bottom = 1298.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+offset_left = 184.0
+offset_top = 1048.0
+offset_right = 934.0
+offset_bottom = 1298.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 184.0
+offset_top = 1048.0
+offset_right = 934.0
+offset_bottom = 1298.0
+theme_override_font_sizes/font_size = 85
+placeholder_text = "\"猫\""
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

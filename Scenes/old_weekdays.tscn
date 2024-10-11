@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://xwtm1bbaqxwe"]
+
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_eqrsa"]
+
+[node name="werkt niet" type="Node2D"]
+
+[node name="background" parent="." instance=ExtResource("2_eqrsa")]
+
+[node name="Back" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 16.0
+offset_right = 267.0
+offset_bottom = 54.0
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 144.0
+offset_right = 272.0
+offset_bottom = 281.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 70
+text = "question"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerDisplay" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 264.0
+offset_right = 262.94
+offset_bottom = 292.0
+size_flags_horizontal = 4
+text = "answer"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="RomajiDisplay" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 280.0
+offset_right = 262.94
+offset_bottom = 308.0
+size_flags_horizontal = 4
+text = "romaji"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 72.0
+offset_top = 310.0
+offset_right = 223.0
+offset_bottom = 365.0
+placeholder_text = "\"猫\""
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="romajiLineEdit" type="LineEdit" parent="."]
+offset_left = 72.0
+offset_top = 370.0
+offset_right = 223.0
+offset_bottom = 425.0
+placeholder_text = "\"romaji\""
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pronouns" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 145.0
+offset_right = 224.0
+offset_bottom = 173.0
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="romajiLineEdit" to="." method="_on_romaji_line_edit_text_submitted"]

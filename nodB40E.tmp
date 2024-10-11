@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8i2a1x8462s"]
+
+[ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_chibj"]
+[ext_resource type="Script" path="res://swipedetector.gd" id="2_pte87"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" parent="." instance=ExtResource("1_chibj")]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 322.0
+offset_bottom = 519.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="a_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="i_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="u_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="e_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="o_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ka_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ki_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ku_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ke_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ko_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="sa_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="shi_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="su_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="se_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="so_button" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_pte87")

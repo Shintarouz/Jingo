@@ -1,0 +1,261 @@
+[gd_scene load_steps=12 format=3 uid="uid://dbihimqgsl53l"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_iafcw"]
+[ext_resource type="Texture2D" uid="uid://biljcxdfwpcgf" path="res://Assets/background 2.png" id="2_bk4sq"]
+[ext_resource type="Texture2D" uid="uid://cvcqbsii03f0h" path="res://Assets/sakura-background-slduycq4iy8xqie1.webp" id="3_3qm7n"]
+[ext_resource type="StyleBox" uid="uid://d2v8olq7xwun" path="res://DelFolder/Button_Normal.tres" id="4_6p68g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjhlh"]
+bg_color = Color(0.976471, 0.698039, 0.819608, 1)
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vrkf"]
+bg_color = Color(0.976471, 0.698039, 0.819608, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.737255, 0, 0.176471, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7nbd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8h5o"]
+bg_color = Color(0.976471, 0.698039, 0.819608, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.737255, 0, 0.176471, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icdts"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.737255, 0, 0.176471, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkfov"]
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qe4g"]
+bg_color = Color(0.439216, 0.568627, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iafcw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sakura-background-slduycq4Iy8Xqie1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(872, 1176)
+scale = Vector2(2.10059, 2.10059)
+texture = ExtResource("3_3qm7n")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 250.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qjhlh")
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -92.0
+offset_right = 224.0
+offset_bottom = 92.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.737255, 0, 0.176471, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vrkf")
+text = "1 / 5"
+
+[node name="Back" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -92.0
+offset_right = -40.0
+offset_bottom = 92.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.737255, 0, 0.176471, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vrkf")
+text = "Back"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -1200.0
+offset_right = 540.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_w7nbd")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_bk4sq")
+expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Panel2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = -1128.0
+offset_right = -248.0
+offset_bottom = -1013.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b8h5o")
+theme_override_styles/fill = SubResource("StyleBoxFlat_icdts")
+value = 54.0
+show_percentage = false
+
+[node name="Panel4" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -1200.0
+offset_right = 540.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_w7nbd")
+
+[node name="Button1" type="Button" parent="CanvasLayer"]
+offset_left = 224.0
+offset_top = 776.0
+offset_right = 474.0
+offset_bottom = 912.0
+theme_override_font_sizes/font_size = 85
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 504.0
+offset_top = 776.0
+offset_right = 754.0
+offset_bottom = 912.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("4_6p68g")
+theme_override_styles/hover = ExtResource("4_6p68g")
+text = "test"
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+offset_left = 224.0
+offset_top = 944.0
+offset_right = 474.0
+offset_bottom = 1144.0
+theme_override_font_sizes/font_size = 85
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+offset_left = 504.0
+offset_top = 944.0
+offset_right = 754.0
+offset_bottom = 1144.0
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = ExtResource("4_6p68g")
+theme_override_styles/hover = ExtResource("4_6p68g")
+theme_override_styles/pressed = ExtResource("4_6p68g")
+
+[node name="QuestionLabel" type="Label" parent="CanvasLayer"]
+offset_left = -88.0
+offset_top = 280.0
+offset_right = 1162.0
+offset_bottom = 930.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 250
+text = "question"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Panel3" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="Panel4" type="Panel" parent="CanvasLayer/Panel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -540.0
+offset_right = 540.0
+offset_bottom = 250.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vkfov")
+
+[node name="Panel5" type="Panel" parent="CanvasLayer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -125.0
+offset_right = 400.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3qe4g")
+
+[connection signal="pressed" from="CanvasLayer/Panel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button4" to="." method="_on_button_4_pressed"]
