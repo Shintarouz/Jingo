@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxklrnd4i1uek"]
+
+[ext_resource type="Script" path="res://DelFolder/Player.gd" id="1_nbdmd"]
+
+[node name="Player" type="Node2D"]
+scale = Vector2(20.56, 20.56)
+script = ExtResource("1_nbdmd")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 9.48444
+offset_top = 15.0292
+offset_right = 17.4844
+offset_bottom = 23.0292
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

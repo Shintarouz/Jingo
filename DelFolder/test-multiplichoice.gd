@@ -28,3 +28,4 @@ func read_json_file(filename):
 	var json_as_text = FileAccess.get_file_as_string(filename)
 	var json_as_dict = JSON.parse_string(json_as_text)
 	return json_as_dict
+
