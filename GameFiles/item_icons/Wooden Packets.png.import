@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qs8brkbjh46a"
-path="res://.godot/imported/wood_packets.png-650980c66e77a2cd326f991e20d500d0.ctex"
+path="res://.godot/imported/Wooden Packets.png-cdeacf1cc9ffdf0769dfc677aa8fceec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameFiles/wood_packets.png"
-dest_files=["res://.godot/imported/wood_packets.png-650980c66e77a2cd326f991e20d500d0.ctex"]
+source_file="res://GameFiles/item_icons/Wooden Packets.png"
+dest_files=["res://.godot/imported/Wooden Packets.png-cdeacf1cc9ffdf0769dfc677aa8fceec.ctex"]
 
 [params]
 

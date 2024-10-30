@@ -1,0 +1,24 @@
+{
+  "Wood Log": {
+	"ItemCategory": "Resource",
+	"StackSize": 99,
+	"Level": 1,
+	"Description": "A sturdy tree branch that can be used for crafting."
+  },
+  "Wooden Packets": {
+	"ItemCategory": "Consumable",
+	"AddHealth": 5,
+	"AddEnergy": 32,
+	"StackSize": 99,
+	"Level": 2,
+	"Description": "It smells like medicine."
+  },
+  "Other Item": {
+	"ItemCategory": "Sword",
+	"ItemAttack": 3,
+	"ItemSpeed": 0.75, 
+	"StackSize": 1,
+	"Level": 3,
+	"Description": "Quite a rusty sword, but should be able to get the job done."
+  }
+}
