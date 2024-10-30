@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cst3hm60jr43c"]
 
 [ext_resource type="Script" path="res://GameFiles/Item.gd" id="1_7qc40"]
-[ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="2_rppsc"]
+[ext_resource type="Texture2D" uid="uid://qs8brkbjh46a" path="res://GameFiles/item_icons/Wooden Packets.png" id="2_8sgm2"]
 
 [node name="Item" type="Node2D"]
 z_index = 1
@@ -11,14 +11,16 @@ script = ExtResource("1_7qc40")
 offset_right = 176.0
 offset_bottom = 192.0
 mouse_filter = 2
-texture = ExtResource("2_rppsc")
+texture = ExtResource("2_8sgm2")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 16.0
-offset_right = 48.0
-offset_bottom = 39.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 26
+offset_right = 102.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 50
 text = "99"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

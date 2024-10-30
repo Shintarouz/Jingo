@@ -1,6 +1,7 @@
 extends Node
 
 var item_data: Dictionary
+var WoodCount : int = 0
 
 func _ready():
 	item_data = Load_data("res://Data/ItemData.json")

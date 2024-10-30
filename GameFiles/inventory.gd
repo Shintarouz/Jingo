@@ -4,6 +4,9 @@ const SlotClass = preload("res://GameFiles/SlotScript.gd")
 @onready var inventory_slots = $GridContainer
 var holding_item = null
 
+func _process(delta):
+	pass
+
 func _ready() -> void:
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.gui_input.connect(slot_gui_input.bind(inv_slot))
@@ -23,7 +26,10 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 						temp_item.global_position = get_global_mouse_position()
 						slot.putIntoSlot(holding_item)
 						holding_item = temp_item
+						# Swaps items
 					else:
+						var Level = int(JsonData.item_data[slot.item.item_name]["Level"])
+						var levelup = Level + 1
 						var stack_size = int(JsonData.item_data[slot.item.item_name]["StackSize"])
 						var able_to_add = stack_size - slot.item.item_quantity
 						if able_to_add >= holding_item.item_quantity:

@@ -36,3 +36,10 @@ func add_item_quantity(amount_to_add):
 func decrease_item_quantity(amount_to_remove):
 	item_quantity -= amount_to_remove
 	$Label.text = str(item_quantity)
+
+
+
+func _on_timer_timeout():
+	print("+5")
+	JsonData.WoodCount += 5
+	print(JsonData.WoodCount)
