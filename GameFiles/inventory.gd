@@ -28,21 +28,32 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 						holding_item = temp_item
 						# Swaps items
 					else:
-						var Level = int(JsonData.item_data[slot.item.item_name]["Level"])
-						var levelup = Level + 1
-						var stack_size = int(JsonData.item_data[slot.item.item_name]["StackSize"])
-						var able_to_add = stack_size - slot.item.item_quantity
-						if able_to_add >= holding_item.item_quantity:
-							slot.item.add_item_quantity(holding_item.item_quantity)
-							holding_item.queue_free()
-							holding_item = null
-						else:
-							slot.item.add_item_quantity(able_to_add)
-							holding_item.decrease_item_quantity(able_to_add)
+						combining(slot)
+						holding_item.queue_free()
+						holding_item = null
 			elif slot.item:
 				holding_item = slot.item
 				slot.pickFromSlot()
 				holding_item.global_position = get_global_mouse_position()
+
+func combining(slot):
+	if slot.item.type_value == 0:
+		slot.item.updateTextures()
+		slot.item.type_value = 1
+	elif slot.item.type_value == 1:
+		slot.item.type_value = 2
+		slot.item.updateTextures()
+	elif slot.item.type_value == 2:
+		slot.item.type_value = 3
+		slot.item.updateTextures()
+	else:
+		slot.item.type_value = 4
+		slot.item.updateTextures()
+
+#func combine_items(slot_item, holding_item, slot):
+	#var level = int(JsonData.item_data[slot.item.item_name]["Level"])
+	#var levelup = level + 1
+	#slot.item.test()
 
 func _input(event):
 	if holding_item:
@@ -70,3 +81,11 @@ func _on_button_pressed():
 				#holding_item = slot.item
 				#slot.pickFromSlot()
 				#holding_item.global_position = get_global_mouse_position()
+
+						#var Level = int(JsonData.item_data[slot.item.item_name]["Level"])
+						#var stack_size = int(JsonData.item_data[slot.item.item_name]["StackSize"])
+						#var able_to_add = stack_size - slot.item.item_quantity
+						#if able_to_add >= holding_item.item_quantity:
+							#slot.item.add_item_quantity(holding_item.item_quantity)
+							#holding_item.queue_free()
+							#holding_item = null

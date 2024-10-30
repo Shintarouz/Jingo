@@ -7,35 +7,40 @@ extends Node2D
 	#else:
 		#$TextureRect.texture = load("res://GameFiles/wood_packets.png")
 		##$TextureRect.texture= load("res://lessons/items/potion.png")
-
+var type_value: int
 var item_name
 var item_quantity
 
 func _ready():
-	var rand_val = randi() % 3
-	if rand_val == 0:
+	type_value = randi() % 4
+	updateTextures()
+
+func updateTextures():
+	if type_value == 0:
 		item_name = "Wood Log"
-	elif rand_val == 1:
+	elif type_value == 1:
 		item_name = "Wooden Packets"
-	else:
+	elif type_value == 2:
 		item_name = "Other Item"
+	elif type_value == 3:
+		item_name = "Rock"
 	
 	$TextureRect.texture = load("res://GameFiles/item_icons/" + item_name + ".png")
-	var stack_size = int(JsonData.item_data[item_name]["StackSize"])
-	item_quantity = randi() % stack_size + 1
+
+	#item_quantity = randi() % stack_size + 1
 	
-	if stack_size == 1:
-		$Label.visible = false
-	else:
-		$Label.text = str(item_quantity)
+	#if stack_size == 1:
+		#$Label.visible = false
+	#else:
+		#$Label.text = str(item_quantity)
 
-func add_item_quantity(amount_to_add):
-	item_quantity += amount_to_add
-	$Label.text = str(item_quantity)
-
-func decrease_item_quantity(amount_to_remove):
-	item_quantity -= amount_to_remove
-	$Label.text = str(item_quantity)
+#func add_item_quantity(amount_to_add):
+	#item_quantity += amount_to_add
+	#$Label.text = str(item_quantity)
+#
+#func decrease_item_quantity(amount_to_remove):
+	#item_quantity -= amount_to_remove
+	#$Label.text = str(item_quantity)
 
 
 

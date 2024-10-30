@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs1f74mvx564f"]
+[gd_scene load_steps=6 format=3 uid="uid://cs1f74mvx564f"]
 
 [ext_resource type="Script" path="res://GameFiles/inventory.gd" id="1_1o6mp"]
 [ext_resource type="Texture2D" uid="uid://beexcruw8agrq" path="res://GameFiles/Envire.png" id="2_itg8n"]
 [ext_resource type="Texture2D" uid="uid://cgbugt3fwdydn" path="res://GameFiles/tori_gate.png" id="4_6cw5d"]
 [ext_resource type="Script" path="res://GameFiles/SlotScript.gd" id="4_ob232"]
+[ext_resource type="PackedScene" uid="uid://dbbj5jj0rt820" path="res://GameFiles/CoinLayout.tscn" id="5_4dtxt"]
 
 [node name="Inventory" type="Node2D"]
 script = ExtResource("1_1o6mp")
@@ -129,6 +130,7 @@ layout_mode = 2
 script = ExtResource("4_ob232")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = -94.0
 offset_top = 444.0
 offset_right = 310.0
@@ -142,5 +144,9 @@ offset_top = 257.0
 offset_right = 978.0
 offset_bottom = 851.0
 texture = ExtResource("4_6cw5d")
+
+[node name="Node2D" parent="." instance=ExtResource("5_4dtxt")]
+position = Vector2(584, 736)
+scale = Vector2(0.755, 0.755)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
