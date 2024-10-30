@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbbj5jj0rt820"]
+[gd_scene load_steps=6 format=3 uid="uid://dbbj5jj0rt820"]
 
 [ext_resource type="Script" path="res://GameFiles/CoinLayout.gd" id="1_hlk08"]
 [ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="1_y3pfi"]
+[ext_resource type="Texture2D" uid="uid://c4m16xnxksxy8" path="res://GameFiles/item_icons/Rock.png" id="3_chsh0"]
+[ext_resource type="Texture2D" uid="uid://bddicg6ay5x1p" path="res://GameFiles/item_icons/Other Item.png" id="4_c8atw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxasg"]
 bg_color = Color(0.956863, 0.658824, 0.788235, 1)
@@ -11,7 +13,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Node2D" type="Node2D"]
+[node name="CoinLayout" type="Node2D"]
 script = ExtResource("1_hlk08")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
@@ -40,3 +42,59 @@ text_overrun_behavior = 1
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
 position = Vector2(9.25554, 13)
 texture = ExtResource("1_y3pfi")
+
+[node name="CanvasGroup2" type="CanvasGroup" parent="."]
+position = Vector2(360, 0)
+scale = Vector2(4.97, 4.97)
+
+[node name="Panel" type="Panel" parent="CanvasGroup2"]
+offset_left = -46.0
+offset_right = 22.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
+
+[node name="Label" type="Label" parent="CanvasGroup2"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -37.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.643137, 0.894118, 0.917647, 1)
+theme_override_colors/font_outline_color = Color(0.952941, 0.505882, 0.74902, 1)
+theme_override_constants/outline_size = 10
+text = "1000"
+horizontal_alignment = 2
+text_overrun_behavior = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup2"]
+position = Vector2(9.25554, 13)
+texture = ExtResource("3_chsh0")
+
+[node name="CanvasGroup3" type="CanvasGroup" parent="."]
+position = Vector2(720, 0)
+scale = Vector2(4.97, 4.97)
+
+[node name="Panel" type="Panel" parent="CanvasGroup3"]
+offset_left = -46.0
+offset_right = 22.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
+
+[node name="Label" type="Label" parent="CanvasGroup3"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -37.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.643137, 0.894118, 0.917647, 1)
+theme_override_colors/font_outline_color = Color(0.952941, 0.505882, 0.74902, 1)
+theme_override_constants/outline_size = 10
+text = "1000"
+horizontal_alignment = 2
+text_overrun_behavior = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup3"]
+position = Vector2(9.25554, 13)
+texture = ExtResource("4_c8atw")

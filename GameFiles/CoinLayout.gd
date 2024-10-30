@@ -6,3 +6,5 @@ func _ready():
 
 func _process(delta):
 	$CanvasGroup/Label.text = str(JsonData.WoodCount)
+	$CanvasGroup2/Label.text = str(JsonData.RockCount)
+	$CanvasGroup3/Label.text = str(JsonData.VoidCount)

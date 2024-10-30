@@ -146,7 +146,7 @@ offset_bottom = 851.0
 texture = ExtResource("4_6cw5d")
 
 [node name="Node2D" parent="." instance=ExtResource("5_4dtxt")]
-position = Vector2(584, 736)
+position = Vector2(280, 104)
 scale = Vector2(0.755, 0.755)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

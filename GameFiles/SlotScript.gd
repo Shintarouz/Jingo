@@ -57,3 +57,4 @@ func putIntoSlot(new_item):
 	inventoryNode.remove_child(item)
 	add_child(item)
 	refresh_style()
+
