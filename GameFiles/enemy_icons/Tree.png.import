@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyfaisxufbyf8"
-path="res://.godot/imported/tile_grass_normal.png-4f999b634f852a800f511e2a20a01725.ctex"
+uid="uid://b8am5wb1ra8b2"
+path="res://.godot/imported/Tree.png-f153ab21d73649d512921c7d8c463549.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameFiles/tile_grass_normal.png"
-dest_files=["res://.godot/imported/tile_grass_normal.png-4f999b634f852a800f511e2a20a01725.ctex"]
+source_file="res://GameFiles/enemy_icons/Tree.png"
+dest_files=["res://.godot/imported/Tree.png-f153ab21d73649d512921c7d8c463549.ctex"]
 
 [params]
 

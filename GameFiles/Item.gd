@@ -1,18 +1,12 @@
 extends Node2D
 
-#
-#func _ready() -> void:
-	#if randi() % 2 == 0:
-		#$TextureRect.texture = load("res://GameFiles/wood.png")
-	#else:
-		#$TextureRect.texture = load("res://GameFiles/wood_packets.png")
-		##$TextureRect.texture= load("res://lessons/items/potion.png")
 var type_value: int
 var item_name
 var item_quantity
 var production_item
 var amount : int
 var production_speed : int
+
 func _ready():
 	type_value = randi() % 4
 	updateTextures()

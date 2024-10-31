@@ -1,8 +1,11 @@
 extends Node2D
 
 const SlotClass = preload("res://GameFiles/SlotScript.gd")
+const EnemyClass = preload("res://GameFiles/enemy.tscn")
 @onready var inventory_slots = $GridContainer
-var holding_item = null
+
+var holding = null
+var current_enemy = null
 
 func _process(delta):
 	pass
@@ -12,52 +15,59 @@ func _ready() -> void:
 		inv_slot.gui_input.connect(slot_gui_input.bind(inv_slot))
 #		inv_slot.connect("gui_input", Callable(self, "slot_gui_inout").bind(inv_slot))
 
+#func spawn_enemy():
+	#current_enemy = EnemyClass.instantiate()
+	#GridContainer.add_child(current_enemy)
+
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if holding_item != null:
+			# if holding is not empty
+			if holding != null: 
+				# if slot is not empty
+				if slot.item:
+					print("test1")
 				if !slot.item:
-					slot.putIntoSlot(holding_item)
-					holding_item = null
+					slot.putIntoSlot(holding)
+					holding = null
 				else:
-					if holding_item.item_name != slot.item.item_name:
+					if holding.item_name != slot.item.item_name:
 						var temp_item = slot.item
 						slot.pickFromSlot()
 						temp_item.global_position = get_global_mouse_position()
-						slot.putIntoSlot(holding_item)
-						holding_item = temp_item
+						slot.putIntoSlot(holding)
+						holding = temp_item
 						# Swaps items
 					else:
 						combining(slot)
-						holding_item.queue_free()
-						holding_item = null
 			elif slot.item:
-				holding_item = slot.item
+				holding = slot.item
 				slot.pickFromSlot()
-				holding_item.global_position = get_global_mouse_position()
+				holding.global_position = get_global_mouse_position()
 
 func combining(slot):
 	if slot.item.type_value == 0:
-		slot.item.updateTextures()
 		slot.item.type_value = 1
+		slot.item.updateTextures()
+		holding.queue_free()
+		holding = null
 	elif slot.item.type_value == 1:
 		slot.item.type_value = 2
 		slot.item.updateTextures()
+		holding.queue_free()
+		holding = null
 	elif slot.item.type_value == 2:
 		slot.item.type_value = 3
 		slot.item.updateTextures()
+		holding.queue_free()
+		holding = null
 	else:
 		slot.item.type_value = 4
 		slot.item.updateTextures()
 
-#func combine_items(slot_item, holding_item, slot):
-	#var level = int(JsonData.item_data[slot.item.item_name]["Level"])
-	#var levelup = level + 1
-	#slot.item.test()
-
 func _input(event):
-	if holding_item:
-		holding_item.global_position = get_global_mouse_position()
+	if holding:
+		holding.global_position = get_global_mouse_position()
 
 
 

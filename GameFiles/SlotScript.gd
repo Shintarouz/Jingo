@@ -13,7 +13,9 @@ var default_style2: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
 
 var ItemClass = preload("res://GameFiles/Item.tscn")
+var EnemyClass = preload("res://GameFiles/enemy.tscn")
 var item = null
+var enemy = null
 
 func _ready() -> void:
 	testnumber = randi_range(0, 2)
@@ -27,6 +29,10 @@ func _ready() -> void:
 	if randi() % 2 == 0:
 		item = ItemClass.instantiate()
 		add_child(item)
+	else:
+		enemy = EnemyClass.instantiate()
+		add_child(enemy)
+		print("yes10")
 	refresh_style()
 
 #func refresh_style():

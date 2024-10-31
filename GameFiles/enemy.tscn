@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dagg4riut6k1b"]
+
+[ext_resource type="Texture2D" uid="uid://b8am5wb1ra8b2" path="res://GameFiles/enemy_icons/Tree.png" id="1_vo5jj"]
+
+[node name="Enemy" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 2
+offset_left = 24.0
+offset_top = -120.0
+offset_right = 46.0
+offset_bottom = -90.0
+scale = Vector2(8, 8)
+texture = ExtResource("1_vo5jj")
+expand_mode = 3
