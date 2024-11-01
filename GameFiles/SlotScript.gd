@@ -14,7 +14,7 @@ var empty_style: StyleBoxTexture = null
 
 var ItemClass = preload("res://GameFiles/Item.tscn")
 var EnemyClass = preload("res://GameFiles/enemy.tscn")
-var item = null
+var object = null
 var enemy = null
 
 func _ready() -> void:
@@ -27,12 +27,12 @@ func _ready() -> void:
 	default_style2.texture = default_tex2
 	empty_style.texture = empty_tex
 	if randi() % 2 == 0:
-		item = ItemClass.instantiate()
-		add_child(item)
-	else:
-		enemy = EnemyClass.instantiate()
-		add_child(enemy)
-		print("yes10")
+		object = ItemClass.instantiate()
+		add_child(object)
+	#else:
+		#enemy = EnemyClass.instantiate()
+		#add_child(enemy)
+		#print("yes10")
 	refresh_style()
 
 #func refresh_style():
@@ -50,17 +50,20 @@ func refresh_style():
 		set("theme_override_styles/panel", default_style2)
 
 func pickFromSlot():
-	remove_child(item)
+	remove_child(object)
 	var inventoryNode = find_parent("Inventory")
-	inventoryNode.add_child(item)
-	item = null
+	inventoryNode.add_child(object)
+	object = null
 	refresh_style()
 
 func putIntoSlot(new_item):
-	item = new_item
-	item.position = Vector2.ZERO
+	object = new_item
+	object.position = Vector2.ZERO
 	var inventoryNode = find_parent("Inventory")
-	inventoryNode.remove_child(item)
-	add_child(item)
+	inventoryNode.remove_child(object)
+	add_child(object)
 	refresh_style()
 
+func Spawn():
+	object = ItemClass.instantiate()
+	add_child(object)

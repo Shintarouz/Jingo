@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-MainMenu="res://Scripts/main_menu.gd"
 DictionaryData="*res://Scenes/DictionaryData.tscn"
 JsonData="*res://GameFiles/JSONData.gd"
 

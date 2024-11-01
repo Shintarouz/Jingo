@@ -1,27 +1,35 @@
 {
   "Wood Log": {
 	"type" : "wood log",
-	"StackSize": 99,
 	"Level": 1,
 	"Description": "A sturdy tree branch that can be used for crafting."
   },
   "Wooden Packets": {
 	"type" : "wooden packets",
-	"StackSize": 99,
 	"Level": 2,
-	"Description": "It smells like medicine."
+	"Description": ""
   },
   "Rock": {
 	"type" : "rock",
-	"StackSize": 99,
 	"Level": 3,
-	"Description": "It smells like medicine."
+	"Description": ""
   },
   "Other Item": {
 	"type" : "other item",
-	"StackSize": 1,
 	"Level": 4,
-	"Description": "Quite a rusty sword, but should be able to get the job done."
+	"Description": ""
+
+  },
+  "Rocks 2": {
+	"type" : "rocks 2",
+	"Level": 5,
+	"Description": ""
+
+  },
+  "Rocks 3": {
+	"type" : "rocks 3",
+	"Level": 6,
+	"Description": ""
 
   }
 }

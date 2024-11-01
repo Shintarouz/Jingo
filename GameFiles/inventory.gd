@@ -1,9 +1,10 @@
 extends Node2D
 
+var ItemClass = preload("res://GameFiles/Item.tscn")
 const SlotClass = preload("res://GameFiles/SlotScript.gd")
 const EnemyClass = preload("res://GameFiles/enemy.tscn")
 @onready var inventory_slots = $GridContainer
-
+var item = ItemClass
 var holding = null
 var current_enemy = null
 
@@ -25,14 +26,14 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 			# if holding is not empty
 			if holding != null: 
 				# if slot is not empty
-				if slot.item:
+				if slot.object:
 					print("test1")
-				if !slot.item:
+				if !slot.object:
 					slot.putIntoSlot(holding)
 					holding = null
 				else:
-					if holding.item_name != slot.item.item_name:
-						var temp_item = slot.item
+					if holding.item_name != slot.object.item_name:
+						var temp_item = slot.object
 						slot.pickFromSlot()
 						temp_item.global_position = get_global_mouse_position()
 						slot.putIntoSlot(holding)
@@ -40,30 +41,37 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 						# Swaps items
 					else:
 						combining(slot)
-			elif slot.item:
-				holding = slot.item
+			elif slot.object:
+				holding = slot.object
 				slot.pickFromSlot()
 				holding.global_position = get_global_mouse_position()
 
 func combining(slot):
-	if slot.item.type_value == 0:
-		slot.item.type_value = 1
-		slot.item.updateTextures()
+	if slot.object.type_value == 0:
+		slot.object.type_value = 1
+		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.item.type_value == 1:
-		slot.item.type_value = 2
-		slot.item.updateTextures()
+	elif slot.object.type_value == 1:
+		slot.object.type_value = 2
+		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.item.type_value == 2:
-		slot.item.type_value = 3
-		slot.item.updateTextures()
+	elif slot.object.type_value == 2:
+		slot.object.type_value = 3
+		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	else:
-		slot.item.type_value = 4
-		slot.item.updateTextures()
+	elif slot.object.type_value == 3:
+		slot.object.type_value = 4
+		slot.object.updateTextures()
+		holding.queue_free()
+		holding = null
+	elif slot.object.type_value == 4:
+		slot.object.type_value = 5
+		slot.object.updateTextures()
+		holding.queue_free()
+		holding = null
 
 func _input(event):
 	if holding:
@@ -99,3 +107,20 @@ func _on_button_pressed():
 							#slot.item.add_item_quantity(holding_item.item_quantity)
 							#holding_item.queue_free()
 							#holding_item = null
+
+
+func _on_button_2_pressed():
+	#if DictionaryData.Coins > 5:
+		#DictionaryData.Coins -= 5
+		var gridcontainer = $GridContainer
+		for inv_slot in inventory_slots.get_children():
+			if inv_slot.object != null:
+				print("item inside")
+			elif inv_slot.object == null:
+				inv_slot.Spawn()
+				return
+
+		#if slot.get_child_count() == 0:
+			#var item_instance = ItemClass
+			#item_instance.Spawn()
+			#slot.add_child(item_instance)

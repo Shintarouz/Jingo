@@ -8,7 +8,7 @@ var amount : int
 var production_speed : int
 
 func _ready():
-	type_value = randi() % 4
+	type_value = randi() % 6
 	updateTextures()
 
 func updateTextures():
@@ -32,7 +32,17 @@ func updateTextures():
 		production_item = 1
 		production_speed = 5
 		_on_timer_timeout()
-	
+	elif type_value == 4:
+		item_name = "Rocks 2"
+		production_item = 1
+		production_speed = 5
+		_on_timer_timeout()
+	elif type_value == 5:
+		item_name = "Rocks 3"
+		production_item = 1
+		production_speed = 5
+		_on_timer_timeout()
+
 	$TextureRect.texture = load("res://GameFiles/item_icons/" + item_name + ".png")
 
 	#item_quantity = randi() % stack_size + 1
@@ -54,10 +64,10 @@ func updateTextures():
 func _on_timer_timeout():
 	if production_item == 0:
 		JsonData.WoodCount += production_speed
-		print(str(production_speed) + "wood")
+		#print(str(production_speed) + "wood")
 	if production_item == 1:
 		JsonData.RockCount += production_speed
-		print(str(production_speed) + "rock")
+		#print(str(production_speed) + "rock")
 	if production_item == 2:
 		JsonData.VoidCount += production_speed
-		print(str(production_speed) + "void")
+		#print(str(production_speed) + "void")
