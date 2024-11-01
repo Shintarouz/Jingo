@@ -65,5 +65,6 @@ func putIntoSlot(new_item):
 	refresh_style()
 
 func Spawn():
-	object = ItemClass.instantiate()
+	#object = ItemClass.instantiate()
+	object = EnemyClass.instantiate()
 	add_child(object)

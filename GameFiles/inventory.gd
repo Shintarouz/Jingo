@@ -3,7 +3,7 @@ extends Node2D
 var ItemClass = preload("res://GameFiles/Item.tscn")
 const SlotClass = preload("res://GameFiles/SlotScript.gd")
 const EnemyClass = preload("res://GameFiles/enemy.tscn")
-@onready var inventory_slots = $GridContainer
+@onready var inventory_slots = $Control/GridContainer
 var item = ItemClass
 var holding = null
 var current_enemy = null
@@ -26,7 +26,7 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 			# if holding is not empty
 			if holding != null: 
 				# if slot is not empty
-				if slot.object:
+				if slot.object == item:
 					print("test1")
 				if !slot.object:
 					slot.putIntoSlot(holding)
@@ -47,28 +47,28 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 				holding.global_position = get_global_mouse_position()
 
 func combining(slot):
-	if slot.object.type_value == 0:
-		slot.object.type_value = 1
+	if slot.object.Item_ID == 0:
+		slot.object.Item_ID = 1
 		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.object.type_value == 1:
-		slot.object.type_value = 2
+	elif slot.object.Item_ID == 1:
+		slot.object.Item_ID = 2
 		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.object.type_value == 2:
-		slot.object.type_value = 3
+	elif slot.object.Item_ID == 2:
+		slot.object.Item_ID = 3
 		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.object.type_value == 3:
-		slot.object.type_value = 4
+	elif slot.object.Item_ID == 3:
+		slot.object.Item_ID = 4
 		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
-	elif slot.object.type_value == 4:
-		slot.object.type_value = 5
+	elif slot.object.Item_ID == 4:
+		slot.object.Item_ID = 5
 		slot.object.updateTextures()
 		holding.queue_free()
 		holding = null
@@ -112,13 +112,15 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	#if DictionaryData.Coins > 5:
 		#DictionaryData.Coins -= 5
-		var gridcontainer = $GridContainer
 		for inv_slot in inventory_slots.get_children():
 			if inv_slot.object != null:
+				print(inv_slot.object)
 				print("item inside")
 			elif inv_slot.object == null:
 				inv_slot.Spawn()
 				return
+			elif inv_slot.object == ItemClass:
+				print("item test")
 
 		#if slot.get_child_count() == 0:
 			#var item_instance = ItemClass

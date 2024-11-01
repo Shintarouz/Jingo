@@ -1,6 +1,6 @@
 extends Node2D
 
-var type_value: int
+var Item_ID: int
 var item_name
 var item_quantity
 var production_item
@@ -8,36 +8,36 @@ var amount : int
 var production_speed : int
 
 func _ready():
-	type_value = randi() % 6
+	Item_ID = randi() % 6
 	updateTextures()
 
 func updateTextures():
-	if type_value == 0:
+	if Item_ID == 0:
 		item_name = "Wood Log"
 		production_item = 0
 		production_speed = 3
 		_on_timer_timeout()
-	elif type_value == 1:
+	elif Item_ID == 1:
 		item_name = "Wooden Packets"
 		production_item = 0
 		production_speed = 3
 		_on_timer_timeout()
-	elif type_value == 2:
+	elif Item_ID == 2:
 		item_name = "Other Item"
 		production_item = 2
 		production_speed = 5
 		_on_timer_timeout()
-	elif type_value == 3:
+	elif Item_ID == 3:
 		item_name = "Rock"
 		production_item = 1
 		production_speed = 5
 		_on_timer_timeout()
-	elif type_value == 4:
+	elif Item_ID == 4:
 		item_name = "Rocks 2"
 		production_item = 1
 		production_speed = 5
 		_on_timer_timeout()
-	elif type_value == 5:
+	elif Item_ID == 5:
 		item_name = "Rocks 3"
 		production_item = 1
 		production_speed = 5
