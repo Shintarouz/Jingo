@@ -5,6 +5,9 @@ var WoodCount : int = 0
 var RockCount : int = 0
 var VoidCount : int = 0
 
+
+
+
 func _ready():
 	item_data = Load_data("res://Data/ItemData.json")
 

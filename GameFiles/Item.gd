@@ -7,41 +7,42 @@ var production_item
 var amount : int
 var production_speed : int
 
+enum ITEM {WOOD_LOG, WOODEN_PACKET, OTHER_ITEM, ROCK, ROCKS_2, ROCKS_3}
+
 func _ready():
 	Item_ID = randi() % 6
 	updateTextures()
 
 func updateTextures():
-	if Item_ID == 0:
-		item_name = "Wood Log"
-		production_item = 0
-		production_speed = 3
-		_on_timer_timeout()
-	elif Item_ID == 1:
-		item_name = "Wooden Packets"
-		production_item = 0
-		production_speed = 3
-		_on_timer_timeout()
-	elif Item_ID == 2:
-		item_name = "Other Item"
-		production_item = 2
-		production_speed = 5
-		_on_timer_timeout()
-	elif Item_ID == 3:
-		item_name = "Rock"
-		production_item = 1
-		production_speed = 5
-		_on_timer_timeout()
-	elif Item_ID == 4:
-		item_name = "Rocks 2"
-		production_item = 1
-		production_speed = 5
-		_on_timer_timeout()
-	elif Item_ID == 5:
-		item_name = "Rocks 3"
-		production_item = 1
-		production_speed = 5
-		_on_timer_timeout()
+	match Item_ID:
+		ITEM.WOOD_LOG:
+			item_name = "Wood Log"
+			production_item = 0
+			production_speed = 3
+		ITEM.WOODEN_PACKET:
+			item_name = "Wooden Packets"
+			production_item = 0
+			production_speed = 3
+		ITEM.OTHER_ITEM:
+			item_name = "Other Item"
+			production_item = 2
+			production_speed = 5
+		ITEM.ROCK:
+			item_name = "Rock"
+			production_item = 1
+			production_speed = 5
+		ITEM.ROCKS_2:
+			item_name = "Rocks 2"
+			production_item = 1
+			production_speed = 5
+		ITEM.ROCKS_3:
+			item_name = "Rocks 3"
+			production_item = 1
+			production_speed = 5
+		_:
+			print("Invalid item id")
+			# als niks match in de lijst
+	_on_timer_timeout()
 
 	$TextureRect.texture = load("res://GameFiles/item_icons/" + item_name + ".png")
 

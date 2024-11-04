@@ -47,31 +47,38 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 				holding.global_position = get_global_mouse_position()
 
 func combining(slot):
-	if slot.object.Item_ID == 0:
-		slot.object.Item_ID = 1
-		slot.object.updateTextures()
-		holding.queue_free()
-		holding = null
-	elif slot.object.Item_ID == 1:
-		slot.object.Item_ID = 2
-		slot.object.updateTextures()
-		holding.queue_free()
-		holding = null
-	elif slot.object.Item_ID == 2:
-		slot.object.Item_ID = 3
-		slot.object.updateTextures()
-		holding.queue_free()
-		holding = null
-	elif slot.object.Item_ID == 3:
-		slot.object.Item_ID = 4
-		slot.object.updateTextures()
-		holding.queue_free()
-		holding = null
-	elif slot.object.Item_ID == 4:
-		slot.object.Item_ID = 5
-		slot.object.updateTextures()
-		holding.queue_free()
-		holding = null
+	match slot.object.Item_ID:
+		0:
+			slot.object.Item_ID = 1
+			slot.object.updateTextures()
+			holding.queue_free()
+			holding = null
+		1:
+			slot.object.Item_ID = 2
+			slot.object.updateTextures()
+			holding.queue_free()
+			holding = null
+		2:
+			slot.object.Item_ID = 3
+			slot.object.updateTextures()
+			holding.queue_free()
+			holding = null
+		3:
+			slot.object.Item_ID = 4
+			slot.object.updateTextures()
+			holding.queue_free()
+			holding = null
+		4:
+			slot.object.Item_ID = 5
+			slot.object.updateTextures()
+			holding.queue_free()
+			holding = null
+
+		#elif slot.object.Item_ID == 4:
+			#slot.object.Item_ID = 5
+			#slot.object.updateTextures()
+			#holding.queue_free()
+			#holding = null
 
 func _input(event):
 	if holding:
