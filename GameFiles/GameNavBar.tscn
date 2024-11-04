@@ -1,13 +1,22 @@
 [gd_scene load_steps=11 format=3 uid="uid://begsl247p1kr"]
 
 [ext_resource type="Script" path="res://GameFiles/GameNavBar.gd" id="1_dxeby"]
-[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="2_huf2m"]
 [ext_resource type="StyleBox" uid="uid://decp6r3a3avb1" path="res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres" id="3_hibkr"]
 [ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="4_2xxxi"]
 [ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="5_vum0m"]
 [ext_resource type="Texture2D" uid="uid://c4m16xnxksxy8" path="res://GameFiles/item_icons/Rock.png" id="6_3id7j"]
 [ext_resource type="Texture2D" uid="uid://bddicg6ay5x1p" path="res://GameFiles/item_icons/Other Item.png" id="7_jhmvg"]
 [ext_resource type="PackedScene" uid="uid://du7w1ifwbmq5x" path="res://GameFiles/shop_menu.tscn" id="8_l0605"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bisvu"]
+bg_color = Color(0.956863, 0.658824, 0.788235, 1)
+border_width_bottom = 15
+border_color = Color(0.929412, 0.466667, 0.635294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujfph"]
 
@@ -21,7 +30,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -540.0
-offset_top = -100.0
+offset_top = -288.0
 offset_right = 540.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -29,9 +38,8 @@ script = ExtResource("1_dxeby")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_top = -170.0
 offset_right = 1080.0
-offset_bottom = 100.0
+offset_bottom = 270.0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 4
@@ -39,7 +47,7 @@ columns = 4
 [node name="Button" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(270, 270)
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_huf2m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bisvu")
 theme_override_styles/hover = ExtResource("3_hibkr")
 theme_override_styles/pressed = ExtResource("4_2xxxi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ujfph")
@@ -57,7 +65,7 @@ texture = ExtResource("5_vum0m")
 [node name="Button2" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(270, 270)
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_huf2m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bisvu")
 theme_override_styles/hover = ExtResource("3_hibkr")
 theme_override_styles/pressed = ExtResource("4_2xxxi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rpxs3")
@@ -75,7 +83,7 @@ texture = ExtResource("6_3id7j")
 [node name="Button3" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(270, 270)
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_huf2m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bisvu")
 theme_override_styles/hover = ExtResource("3_hibkr")
 theme_override_styles/pressed = ExtResource("4_2xxxi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rpxs3")
@@ -93,7 +101,7 @@ texture = ExtResource("7_jhmvg")
 [node name="Button4" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(270, 270)
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_huf2m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bisvu")
 theme_override_styles/hover = ExtResource("3_hibkr")
 theme_override_styles/pressed = ExtResource("4_2xxxi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rpxs3")
