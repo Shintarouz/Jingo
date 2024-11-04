@@ -9,7 +9,11 @@ var production_speed : int
 
 enum ITEM {WOOD_LOG, WOODEN_PACKET, OTHER_ITEM, ROCK, ROCKS_2, ROCKS_3}
 
+func _process(delta):
+	pass
+
 func _ready():
+	animation()
 	Item_ID = randi() % 6
 	updateTextures()
 
@@ -60,7 +64,16 @@ func updateTextures():
 #func decrease_item_quantity(amount_to_remove):
 	#item_quantity -= amount_to_remove
 	#$Label.text = str(item_quantity)
-
+func animation():
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_QUAD)
+	var node = get_node("TextureRect")
+	var scale1 = Vector2(1.0, 1.0)
+	var scale2 = Vector2(1.1, 1.1)
+	var duration = 1.5
+	tween.tween_property(node, "scale", scale1, duration)
+	tween.tween_property(node, "scale", scale2, duration)
+	tween.set_loops(-1)
 
 func _on_timer_timeout():
 	if production_item == 0:

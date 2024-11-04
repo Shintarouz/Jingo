@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://GameFiles/CoinLayout.gd" id="1_hlk08"]
 [ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="1_y3pfi"]
-[ext_resource type="Texture2D" uid="uid://c4m16xnxksxy8" path="res://GameFiles/item_icons/Rock.png" id="3_chsh0"]
 [ext_resource type="Texture2D" uid="uid://bddicg6ay5x1p" path="res://GameFiles/item_icons/Other Item.png" id="4_c8atw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxasg"]
@@ -12,6 +11,9 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xyo5y"]
+load_path = "res://.godot/imported/Rock.png-8b22fa474e0f7a97e25b524e59519a29.ctex"
 
 [node name="CoinLayout" type="Node2D"]
 script = ExtResource("1_hlk08")
@@ -69,7 +71,7 @@ text_overrun_behavior = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup2"]
 position = Vector2(9.25554, 13)
-texture = ExtResource("3_chsh0")
+texture = SubResource("CompressedTexture2D_xyo5y")
 
 [node name="CanvasGroup3" type="CanvasGroup" parent="."]
 position = Vector2(720, 0)

@@ -4,7 +4,6 @@
 [ext_resource type="StyleBox" uid="uid://decp6r3a3avb1" path="res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres" id="3_hibkr"]
 [ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="4_2xxxi"]
 [ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="5_vum0m"]
-[ext_resource type="Texture2D" uid="uid://c4m16xnxksxy8" path="res://GameFiles/item_icons/Rock.png" id="6_3id7j"]
 [ext_resource type="Texture2D" uid="uid://bddicg6ay5x1p" path="res://GameFiles/item_icons/Other Item.png" id="7_jhmvg"]
 [ext_resource type="PackedScene" uid="uid://du7w1ifwbmq5x" path="res://GameFiles/shop_menu.tscn" id="8_l0605"]
 
@@ -22,7 +21,11 @@ expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpxs3"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xyo5y"]
+load_path = "res://.godot/imported/Rock.png-8b22fa474e0f7a97e25b524e59519a29.ctex"
+
 [node name="GameNavBar" type="Control"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -78,7 +81,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_3id7j")
+texture = SubResource("CompressedTexture2D_xyo5y")
 
 [node name="Button3" type="Button" parent="GridContainer"]
 custom_minimum_size = Vector2(270, 270)
@@ -114,7 +117,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_3id7j")
+texture = SubResource("CompressedTexture2D_xyo5y")
 
 [node name="ShopMenu" parent="." instance=ExtResource("8_l0605")]
 visible = false

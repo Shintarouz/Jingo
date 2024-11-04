@@ -4,7 +4,9 @@ var item_data: Dictionary
 var WoodCount : int = 0
 var RockCount : int = 0
 var VoidCount : int = 0
-
+var WoodCountMax : int = 1000
+var RockCountMax : int = 1000
+var VoidCountMax : int = 1000
 
 
 
