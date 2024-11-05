@@ -13,7 +13,7 @@ func _process(delta):
 	pass
 
 func _ready():
-	animation()
+	#animation()
 	Item_ID = randi() % 6
 	updateTextures()
 

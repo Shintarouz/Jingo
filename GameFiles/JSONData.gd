@@ -9,6 +9,13 @@ var RockCountMax : int = 1000
 var VoidCountMax : int = 1000
 
 
+func _process(delta):
+	if WoodCount > WoodCountMax:
+		WoodCount = WoodCountMax
+	if RockCount > RockCountMax:
+		RockCount = RockCountMax
+	if VoidCount > VoidCountMax:
+		VoidCount = VoidCountMax
 
 func _ready():
 	item_data = Load_data("res://Data/ItemData.json")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbbj5jj0rt820"]
+[gd_scene load_steps=8 format=3 uid="uid://dbbj5jj0rt820"]
 
 [ext_resource type="Script" path="res://GameFiles/CoinLayout.gd" id="1_hlk08"]
 [ext_resource type="Texture2D" uid="uid://b18r0ewmmnq72" path="res://GameFiles/item_icons/Wood Log.png" id="1_y3pfi"]
@@ -12,6 +12,24 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qin4m"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lch8i"]
+bg_color = Color(0.643137, 0.627451, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xyo5y"]
 load_path = "res://.godot/imported/Rock.png-8b22fa474e0f7a97e25b524e59519a29.ctex"
 
@@ -21,11 +39,21 @@ script = ExtResource("1_hlk08")
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 scale = Vector2(4.97, 4.97)
 
-[node name="Panel" type="Panel" parent="CanvasGroup"]
+[node name="Wood" type="Panel" parent="CanvasGroup"]
+visible = false
 offset_left = -46.0
 offset_right = 22.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
+
+[node name="WoodBar" type="ProgressBar" parent="CanvasGroup"]
+offset_left = -46.0
+offset_right = 22.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxFlat_qin4m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lch8i")
+value = 55.54
+show_percentage = false
 
 [node name="Label" type="Label" parent="CanvasGroup"]
 anchors_preset = 1
@@ -50,10 +78,18 @@ position = Vector2(360, 0)
 scale = Vector2(4.97, 4.97)
 
 [node name="Panel" type="Panel" parent="CanvasGroup2"]
+visible = false
 offset_left = -46.0
 offset_right = 22.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
+
+[node name="RockBar" type="ProgressBar" parent="CanvasGroup2"]
+offset_left = -46.0
+offset_right = 22.0
+offset_bottom = 24.0
+value = 43.6
+show_percentage = false
 
 [node name="Label" type="Label" parent="CanvasGroup2"]
 anchors_preset = 1
@@ -78,10 +114,18 @@ position = Vector2(720, 0)
 scale = Vector2(4.97, 4.97)
 
 [node name="Panel" type="Panel" parent="CanvasGroup3"]
+visible = false
 offset_left = -46.0
 offset_right = 22.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
+
+[node name="VoidBar" type="ProgressBar" parent="CanvasGroup3"]
+offset_left = -46.0
+offset_right = 22.0
+offset_bottom = 24.0
+value = 43.6
+show_percentage = false
 
 [node name="Label" type="Label" parent="CanvasGroup3"]
 anchors_preset = 1
