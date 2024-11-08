@@ -133,3 +133,13 @@ func _on_button_2_pressed():
 			#var item_instance = ItemClass
 			#item_instance.Spawn()
 			#slot.add_child(item_instance)
+
+
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+
+func _on_button_4_pressed():
+	get_tree().change_scene_to_file("res://GameFiles/house_level/house_level.tscn")

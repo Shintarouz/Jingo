@@ -4,9 +4,13 @@ extends Panel
 # Called when the node enters the scene tree for the first time.
 var testnumber
 
-var default_tex = preload("res://GameFiles/tile_grass_normal.png")
-var default_tex2 = preload("res://GameFiles/tile_grass_cracked.png")
-var empty_tex = preload("res://GameFiles/tile_grass_normal.png")
+#var default_tex = preload("res://GameFiles/tile_grass_normal.png")
+#var default_tex2 = preload("res://GameFiles/tile_grass_cracked.png")
+#var empty_tex = preload("res://GameFiles/tile_grass_normal.png")
+
+var default_tex = preload("res://GameFiles/tile_3x3.png")
+var default_tex2 = preload("res://GameFiles/tile_3x3.png")
+var empty_tex = preload("res://GameFiles/tile_3x3.png")
 
 var default_style: StyleBoxTexture = null
 var default_style2: StyleBoxTexture = null

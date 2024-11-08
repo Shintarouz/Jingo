@@ -7,14 +7,14 @@ var production_item
 var amount : int
 var production_speed : int
 
-enum ITEM {WOOD_LOG, WOODEN_PACKET, OTHER_ITEM, ROCK, ROCKS_2, ROCKS_3}
+enum ITEM {WOOD_LOG, WOODEN_PACKET, OTHER_ITEM, ROCK, ROCKS_2, ROCKS_3, MINI_CHEST}
 
 func _process(delta):
 	pass
 
 func _ready():
 	#animation()
-	Item_ID = randi() % 6
+	Item_ID = randi() % 7
 	updateTextures()
 
 func updateTextures():
@@ -41,6 +41,10 @@ func updateTextures():
 			production_speed = 5
 		ITEM.ROCKS_3:
 			item_name = "Rocks 3"
+			production_item = 1
+			production_speed = 5
+		ITEM.MINI_CHEST:
+			item_name = "Mini Chest"
 			production_item = 1
 			production_speed = 5
 		_:

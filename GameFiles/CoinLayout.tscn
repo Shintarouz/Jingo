@@ -48,7 +48,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_uxasg")
 
 [node name="WoodBar" type="ProgressBar" parent="CanvasGroup"]
 offset_left = -46.0
-offset_right = 21.0
+offset_right = 22.0
 offset_bottom = 24.0
 theme_override_styles/background = SubResource("StyleBoxFlat_qin4m")
 theme_override_styles/fill = SubResource("StyleBoxFlat_lch8i")

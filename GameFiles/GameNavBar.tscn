@@ -27,22 +27,16 @@ load_path = "res://.godot/imported/Rock.png-8b22fa474e0f7a97e25b524e59519a29.cte
 [node name="GameNavBar" type="Control"]
 z_index = 1
 layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -540.0
-offset_top = -288.0
-offset_right = 540.0
-grow_horizontal = 2
-grow_vertical = 0
+anchors_preset = 0
+offset_right = 270.0
+offset_bottom = 72.0
 script = ExtResource("1_dxeby")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 270.0
+scale = Vector2(0.25, 0.25)
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 4

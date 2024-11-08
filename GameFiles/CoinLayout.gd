@@ -14,3 +14,7 @@ func _process(delta):
 	$CanvasGroup/WoodBar.max_value = JsonData.WoodCountMax
 	$CanvasGroup2/RockBar.max_value = JsonData.RockCountMax
 	$CanvasGroup3/VoidBar.max_value = JsonData.VoidCountMax
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://GameFiles/inventory.tscn")
