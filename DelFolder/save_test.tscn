@@ -1,38 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://ta78sp76dlmb"]
+[gd_scene load_steps=2 format=3 uid="uid://ta78sp76dlmb"]
 
 [ext_resource type="Script" path="res://save_game.gd" id="1_34vga"]
-[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="1_gqbyc"]
 
 [node name="SaveTest" type="Node2D"]
 script = ExtResource("1_34vga")
 
 [node name="save" type="Button" parent="."]
-offset_left = 328.0
-offset_top = 96.0
-offset_right = 448.0
-offset_bottom = 240.0
+offset_left = 256.0
+offset_top = 336.0
+offset_right = 376.0
+offset_bottom = 480.0
 text = "save"
 
 [node name="load" type="Button" parent="."]
-offset_left = 536.0
-offset_top = 96.0
-offset_right = 656.0
-offset_bottom = 240.0
+offset_left = 464.0
+offset_top = 336.0
+offset_right = 584.0
+offset_bottom = 480.0
 text = "load"
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 312.0
-offset_top = 328.0
-offset_right = 728.0
-offset_bottom = 544.0
-theme_override_styles/panel = ExtResource("1_gqbyc")
-
 [node name="reset" type="Button" parent="."]
-offset_left = 736.0
-offset_top = 184.0
-offset_right = 928.0
-offset_bottom = 448.0
+offset_left = 664.0
+offset_top = 336.0
+offset_right = 792.0
+offset_bottom = 480.0
+text = "reset"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 592.0
+offset_right = 656.0
+offset_bottom = 832.0
+text = "Back"
 
 [connection signal="pressed" from="save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -54,3 +54,7 @@ func _furigana_checker():
 	if DictionaryData.FuriganaMode == false:
 		$Control2/VBoxContainer/Control/HBoxContainer/FuriganaOffButton.modulate = Color(0, 1, 0)
 		$Control2/VBoxContainer/Control/HBoxContainer/FuriganaOnButton.modulate = Color(1, 0, 0)
+
+
+func _on_save_pressed():
+	get_tree().change_scene_to_file("res://DelFolder/save_test.tscn")

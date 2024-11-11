@@ -242,3 +242,7 @@ func _on_reset_pressed():
 	VocabCheck10 = false
 	
 	save()
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/options_menu.tscn")
