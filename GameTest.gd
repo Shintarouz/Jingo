@@ -232,10 +232,10 @@ func coins_adder(amount):
 	SaveGame.Coins += amount
 
 func pgbar_adder_1(amount):
-	DictionaryData.ProgressBarValue3 += amount
+	SaveGame.ProgressBarValue1 += amount
 
 func pgbar_adder_2(amount):
-	DictionaryData.ProgressBarValue4 += amount
+	SaveGame.ProgressBarValue2 += amount
 
 func _game_mode_picker():
 	
@@ -249,6 +249,8 @@ func _game_mode_picker():
 		DictionaryData.hira_mamimumemo,
 		DictionaryData.hira_yayuyo,
 		DictionaryData.hira_wanwo,
+		DictionaryData.Test10,
+
 		DictionaryData.kata_aiueo,
 		DictionaryData.kata_kakikukeko,
 		DictionaryData.kata_sashisuseso,

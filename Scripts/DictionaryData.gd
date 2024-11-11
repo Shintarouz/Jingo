@@ -211,6 +211,19 @@ var hira_wanwo = [
 		"question" : ["を"],
 		"answer" : ["wo"]
 	}]
+var Test10 = [
+	{
+		"question" : ["わ"],
+		"answer" : ["wa"]
+	},
+	{
+		"question" : ["ん"],
+		"answer" : ["n"]
+	},
+	{
+		"question" : ["を"],
+		"answer" : ["wo"]
+	}]
 
 var kata_aiueo = [
 	{

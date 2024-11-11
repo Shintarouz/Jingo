@@ -220,7 +220,7 @@ func _text_generator():
 
 func _menu_color_picker():
 	if DictionaryData.ColorDict == 1:
-		$OG/NavBarTop/ProgressBar.value = DictionaryData.ProgressBarValue1
+		$OG/NavBarTop/ProgressBar.value = SaveGame.ProgressBarValue1
 		var StyleBoxHiraN = load("res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres")
 		var StyleBoxHiraH = load("res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres")
 		var StyleBoxHiraP = load("res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres")
@@ -256,7 +256,7 @@ func _menu_color_picker():
 			btn.set("theme_override_colors/font_hover_pressed_color",Color("00c6bd"))
 			btn.set("theme_override_colors/font_focus_color", Color("00c6bd"))
 	if DictionaryData.ColorDict == 2:
-		$OG/NavBarTop/ProgressBar.value = DictionaryData.ProgressBarValue2
+		$OG/NavBarTop/ProgressBar.value = SaveGame.ProgressBarValue2
 		var StyleBoxKataN = load("res://Assets/Tres/KataButtons/Kata_Button_Normal.tres")
 		var StyleBoxKataH = load("res://Assets/Tres/KataButtons/Kata_Button_Hover.tres")
 		var StyleBoxKataP = load("res://Assets/Tres/KataButtons/Kata_Button_Pressed.tres")
@@ -291,7 +291,7 @@ func _menu_color_picker():
 			btn.set("theme_override_colors/font_hover_pressed_color",Color("158eba"))
 			btn.set("theme_override_colors/font_focus_color", Color("158eba"))
 	if DictionaryData.ColorDict == 3:
-		$OG/NavBarTop/ProgressBar.value = DictionaryData.ProgressBarValue3
+		$OG/NavBarTop/ProgressBar.value = SaveGame.ProgressBarValue3
 		var StyleBoxKanjiN = load("res://Assets/Tres/KanjiButtons/Kanji_Button_Normal.tres")
 		var StyleBoxKanjiH = load("res://Assets/Tres/KanjiButtons/Kanji_Button_Hover.tres")
 		var StyleBoxKanjiP = load("res://Assets/Tres/KanjiButtons/Kanji_Button_Pressed.tres")
@@ -326,7 +326,7 @@ func _menu_color_picker():
 			btn.set("theme_override_colors/font_hover_pressed_color",Color("940079"))
 			btn.set("theme_override_colors/font_focus_color", Color("940079"))
 	if DictionaryData.ColorDict == 4:
-		$OG/NavBarTop/ProgressBar.value = DictionaryData.ProgressBarValue4
+		$OG/NavBarTop/ProgressBar.value = SaveGame.ProgressBarValue4
 		var StyleBoxVocabN = load("res://Assets/Tres/VocabButtons/Vocab_Button_Normal.tres")
 		var StyleBoxVocabH = load("res://Assets/Tres/VocabButtons/Vocab_Button_Hover.tres")
 		var StyleBoxVocabP = load("res://Assets/Tres/VocabButtons/Vocab_Button_Pressed.tres")

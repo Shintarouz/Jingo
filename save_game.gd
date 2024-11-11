@@ -2,6 +2,11 @@ extends Node
 
 var Coins : int
 
+var ProgressBarValue1 : int
+var ProgressBarValue2 : int
+var ProgressBarValue3 : int
+var ProgressBarValue4 : int
+
 var HiraCheck1: bool
 var HiraCheck2: bool
 var HiraCheck3: bool
@@ -59,6 +64,12 @@ func _ready():
 	var Data = JSON.parse_string(JsonString)
 	print(Data)
 	Coins = Data.Coins
+
+	ProgressBarValue1 = Data.ProgressBarValue1
+	ProgressBarValue2 = Data.ProgressBarValue2
+	ProgressBarValue3 = Data.ProgressBarValue3
+	ProgressBarValue4 = Data.ProgressBarValue4
+
 	HiraCheck1 = Data.HiraCheck1
 	HiraCheck2 = Data.HiraCheck2
 	HiraCheck3 = Data.HiraCheck3
@@ -80,17 +91,17 @@ func _ready():
 	KataCheck8 = Data.KataCheck8
 	KataCheck9 = Data.KataCheck9
 	KataCheck10 = Data.KataCheck10
-
-	KanjiCheck1 = Data.KanjiCheck1
-	KanjiCheck2 = Data.KanjiCheck2
-	KanjiCheck3 = Data.KanjiCheck3
-	KanjiCheck4 = Data.KanjiCheck4
-	KanjiCheck5 = Data.KanjiCheck5
-	KanjiCheck6 = Data.KanjiCheck6
-	KanjiCheck7 = Data.KanjiCheck7
-	KanjiCheck8 = Data.KanjiCheck8
-	KanjiCheck9 = Data.KanjiCheck9
-	KanjiCheck10 = Data.KanjiCheck10
+#
+	#KanjiCheck1 = Data.KanjiCheck1
+	#KanjiCheck2 = Data.KanjiCheck2
+	#KanjiCheck3 = Data.KanjiCheck3
+	#KanjiCheck4 = Data.KanjiCheck4
+	#KanjiCheck5 = Data.KanjiCheck5
+	#KanjiCheck6 = Data.KanjiCheck6
+	#KanjiCheck7 = Data.KanjiCheck7
+	#KanjiCheck8 = Data.KanjiCheck8
+	#KanjiCheck9 = Data.KanjiCheck9
+	#KanjiCheck10 = Data.KanjiCheck10
 
 	#VocabCheck1 = Data.VocabCheck1
 	#VocabCheck2 = Data.VocabCheck2
@@ -109,7 +120,12 @@ func _ready():
 func save():
 	var datatest = {
 		"Coins" : Coins,
-
+		
+		"ProgressBarValue1" : ProgressBarValue1,
+		"ProgressBarValue2" : ProgressBarValue2,
+		"ProgressBarValue3" : ProgressBarValue3,
+		"ProgressBarValue4" : ProgressBarValue4,
+		
 		"HiraCheck1" : HiraCheck1,
 		"HiraCheck2" : HiraCheck2,
 		"HiraCheck3" : HiraCheck3,
@@ -174,6 +190,13 @@ func _on_load_pressed():
 
 
 func _on_reset_pressed():
+	Coins = 0
+
+	ProgressBarValue1 = 0
+	ProgressBarValue2 = 0
+	ProgressBarValue3 = 0
+	ProgressBarValue4 = 0
+
 	HiraCheck1 = false
 	HiraCheck2 = false
 	HiraCheck3 = false
