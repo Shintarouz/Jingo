@@ -10,7 +10,7 @@ func _ready():
 	_completed_level()
 	_unlock_level()
 	_text_switcher()
-	$OG/NavBarTop/Label.text = "¥" + str(DictionaryData.Coins)
+	$OG/NavBarTop/Label.text = "¥" + str(SaveGame.Coins)
 
 
 func _unlock_level():

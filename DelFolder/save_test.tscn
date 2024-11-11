@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5x5h3oaqmymi"]
+[gd_scene load_steps=3 format=3 uid="uid://ta78sp76dlmb"]
 
 [ext_resource type="Script" path="res://save_game.gd" id="1_34vga"]
 [ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="1_gqbyc"]

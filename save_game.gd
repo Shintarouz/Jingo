@@ -1,4 +1,7 @@
 extends Node
+
+var Coins : int
+
 var HiraCheck1: bool
 var HiraCheck2: bool
 var HiraCheck3: bool
@@ -55,6 +58,7 @@ func _ready():
 	# from json string to dictionary
 	var Data = JSON.parse_string(JsonString)
 	print(Data)
+	Coins = Data.Coins
 	HiraCheck1 = Data.HiraCheck1
 	HiraCheck2 = Data.HiraCheck2
 	HiraCheck3 = Data.HiraCheck3
@@ -104,6 +108,8 @@ func _ready():
 
 func save():
 	var datatest = {
+		"Coins" : Coins,
+
 		"HiraCheck1" : HiraCheck1,
 		"HiraCheck2" : HiraCheck2,
 		"HiraCheck3" : HiraCheck3,

@@ -128,164 +128,193 @@ func _answer_checker():
 func _level_completer():
 	if DictionaryData.GameDict == 21:
 		if SaveGame.KanjiCheck1 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck1 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 22:
 		if SaveGame.KanjiCheck2 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck2 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 23:
 		if SaveGame.KanjiCheck3 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck3 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 24:
 		if SaveGame.KanjiCheck4 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck4 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 25:
 		if SaveGame.KanjiCheck5 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck5 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 26:
 		if SaveGame.KanjiCheck6 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck6 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 27:
 		if SaveGame.KanjiCheck7 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck7 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 28:
 		if SaveGame.KanjiCheck8 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck8 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 29:
 		if SaveGame.KanjiCheck9 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck9 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 30:
 		if SaveGame.KanjiCheck10 == false:
-			DictionaryData.ProgressBarValue3 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_3(10)
+			coins_adder(5)
 			SaveGame.KanjiCheck10 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 31:
 		if SaveGame.VocabCheck1 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck1 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 32:
 		if SaveGame.VocabCheck2 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck2 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 33:
 		if SaveGame.VocabCheck3 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck3 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 34:
 		if SaveGame.VocabCheck4 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck4 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 35:
 		if SaveGame.VocabCheck5 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck5 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 36:
 		if SaveGame.VocabCheck6 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck6 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 37:
 		if SaveGame.VocabCheck7 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck7 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 38:
 		if SaveGame.VocabCheck8 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck8 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 39:
 		if SaveGame.VocabCheck9 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck9 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
 	if DictionaryData.GameDict == 40:
 		if SaveGame.VocabCheck10 == false:
-			DictionaryData.ProgressBarValue4 +=10
-			DictionaryData.Coins += 5
+			pgbar_adder_4(10)
+			coins_adder(5)
 			SaveGame.VocabCheck10 = true
 			SaveGame.save()
 		else:
-			DictionaryData.Coins += 1
+			coins_adder(1)
+
+func coins_adder(amount):
+	print("coins" + amount)
+	SaveGame.Coins += amount
+
+func pgbar_adder_3(amount):
+	DictionaryData.ProgressBarValue3 += amount
+
+func pgbar_adder_4(amount):
+	DictionaryData.ProgressBarValue4 += amount
 
 func _game_mode_picker():
 # TODO: moet nog verandert worden naar kanji!!

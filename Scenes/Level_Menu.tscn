@@ -1,8 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://wsqm8vkd045j"]
+[gd_scene load_steps=30 format=3 uid="uid://wsqm8vkd045j"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Menu.gd" id="1_anjq2"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_fv2qr"]
-[ext_resource type="Texture2D" uid="uid://cvcqbsii03f0h" path="res://Assets/sakura-background-slduycq4iy8xqie1.webp" id="3_dvqwp"]
 [ext_resource type="StyleBox" uid="uid://bd8gpdcq1ne6d" path="res://Assets/Tres/HiraButtons/Hira_Gradient.tres" id="4_leepn"]
 [ext_resource type="StyleBox" uid="uid://h7sk5emm7dn1" path="res://DelFolder/Icon_Button_Normal.tres" id="5_lh7x1"]
 [ext_resource type="StyleBox" uid="uid://doti71mshbyk7" path="res://DelFolder/Icon_Button_Hover.tres" id="6_44qk6"]
@@ -77,12 +76,6 @@ offset_right = 1080.0
 offset_bottom = 2400.0
 
 [node name="background" parent="OG" instance=ExtResource("2_fv2qr")]
-
-[node name="Sakura-background-slduycq4Iy8Xqie1" type="Sprite2D" parent="OG"]
-visible = false
-position = Vector2(872, 1176)
-scale = Vector2(2.10059, 2.10059)
-texture = ExtResource("3_dvqwp")
 
 [node name="NavBarBottom" type="Panel" parent="OG"]
 custom_minimum_size = Vector2(1080, 0)
@@ -1155,176 +1148,6 @@ theme_override_styles/pressed = ExtResource("12_gp7cv")
 theme_override_styles/disabled = ExtResource("13_s1p7r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
 text = "わ"
-
-[node name="Panels" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_lock_ = true
-
-[node name="Panel" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_right = 80.0
-offset_bottom = 40.0
-
-[node name="Panel2" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 40.0
-offset_bottom = 80.0
-
-[node name="Panel21" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 200.0
-offset_right = 80.0
-offset_bottom = 240.0
-
-[node name="Panel23" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 240.0
-offset_right = 80.0
-offset_bottom = 280.0
-
-[node name="Panel24" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 280.0
-offset_right = 40.0
-offset_bottom = 320.0
-
-[node name="Panel22" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 160.0
-offset_right = 40.0
-offset_bottom = 200.0
-
-[node name="Panel3" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_right = 1040.0
-offset_bottom = 40.0
-
-[node name="Panel5" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 200.0
-offset_right = 1040.0
-offset_bottom = 240.0
-
-[node name="Panel7" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 240.0
-offset_right = 1040.0
-offset_bottom = 280.0
-
-[node name="Panel8" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 280.0
-offset_right = 1080.0
-offset_bottom = 320.0
-
-[node name="Panel9" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 2080.0
-offset_right = 1040.0
-offset_bottom = 2120.0
-
-[node name="Panel11" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 2120.0
-offset_right = 1040.0
-offset_bottom = 2160.0
-
-[node name="Panel15" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 2120.0
-offset_right = 80.0
-offset_bottom = 2160.0
-
-[node name="Panel17" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 2360.0
-offset_right = 80.0
-offset_bottom = 2400.0
-
-[node name="Panel18" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 2320.0
-offset_right = 40.0
-offset_bottom = 2360.0
-
-[node name="Panel19" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 2080.0
-offset_right = 80.0
-offset_bottom = 2120.0
-
-[node name="Panel20" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 2040.0
-offset_right = 40.0
-offset_bottom = 2080.0
-
-[node name="Panel16" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_top = 2160.0
-offset_right = 40.0
-offset_bottom = 2200.0
-
-[node name="Panel12" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 2160.0
-offset_right = 1080.0
-offset_bottom = 2200.0
-
-[node name="Panel13" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 2320.0
-offset_right = 1080.0
-offset_bottom = 2360.0
-
-[node name="Panel14" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 2360.0
-offset_right = 1040.0
-offset_bottom = 2400.0
-
-[node name="Panel10" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 2040.0
-offset_right = 1080.0
-offset_bottom = 2080.0
-
-[node name="Panel4" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 40.0
-offset_right = 1080.0
-offset_bottom = 80.0
-
-[node name="Panel6" type="Panel" parent="Panels"]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 160.0
-offset_right = 1080.0
-offset_bottom = 200.0
 
 [connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control/Alpha_Button_1" to="." method="_on_hiragana_button_pressed"]
 [connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control2/Alpha_Button_2" to="." method="_on_katakana_button_pressed"]

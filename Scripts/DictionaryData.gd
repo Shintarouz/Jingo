@@ -1,6 +1,6 @@
 extends Node2D
 
-var Coins = 0
+#var Coins = 0
 var ColorDict = 1
 var GameDict
 var TextCheck = 1
@@ -12,49 +12,6 @@ var RomajiOption = true
 var FuriganaMode = true
 var FirstTimeKanjiCheck = false
 
-#var HiraCheck1: bool
-#var HiraCheck2: bool
-#var HiraCheck3: bool
-#var HiraCheck4: bool
-#var HiraCheck5: bool
-#var HiraCheck6: bool
-#var HiraCheck7: bool
-#var HiraCheck8: bool
-#var HiraCheck9: bool
-#var HiraCheck10: bool
-#
-#var KataCheck1: bool
-#var KataCheck2: bool
-#var KataCheck3: bool
-#var KataCheck4: bool
-#var KataCheck5: bool
-#var KataCheck6: bool
-#var KataCheck7: bool
-#var KataCheck8: bool
-#var KataCheck9: bool
-#var KataCheck10: bool
-#
-#var KanjiCheck1 : bool
-#var KanjiCheck2 : bool
-#var KanjiCheck3 : bool
-#var KanjiCheck4 : bool
-#var KanjiCheck5 : bool
-#var KanjiCheck6 : bool
-#var KanjiCheck7 : bool
-#var KanjiCheck8 : bool
-#var KanjiCheck9 : bool
-#var KanjiCheck10 : bool
-#
-#var VocabCheck1 : bool
-#var VocabCheck2 : bool
-#var VocabCheck3 : bool
-#var VocabCheck4 : bool
-#var VocabCheck5 : bool
-#var VocabCheck6 : bool
-#var VocabCheck7 : bool
-#var VocabCheck8 : bool
-#var VocabCheck9 : bool
-#var VocabCheck10 : bool
 
 var options_check1 = true
 
