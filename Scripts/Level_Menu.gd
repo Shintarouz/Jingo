@@ -14,160 +14,160 @@ func _ready():
 
 
 func _unlock_level():
-	if DictionaryData.HiraCheck1 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck1 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = true
-	if DictionaryData.HiraCheck1 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck1 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = false
-	if DictionaryData.HiraCheck2 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck2 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = true
-	if DictionaryData.HiraCheck2 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck2 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = false
-	if DictionaryData.HiraCheck3 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck3 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = true
-	if DictionaryData.HiraCheck3 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck3 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = false
-	if DictionaryData.HiraCheck4 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck4 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = true
-	if DictionaryData.HiraCheck4 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck4 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = false
-	if DictionaryData.HiraCheck5 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck5 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = true
-	if DictionaryData.HiraCheck5 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck5 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = false
-	if DictionaryData.HiraCheck6 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck6 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = true
-	if DictionaryData.HiraCheck6 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck6 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = false
-	if DictionaryData.HiraCheck7 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck7 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = true
-	if DictionaryData.HiraCheck7 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck7 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = false
-	if DictionaryData.HiraCheck8 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck8 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = true
-	if DictionaryData.HiraCheck8 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck8 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = false
-	if DictionaryData.HiraCheck9 == false and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck9 == false and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = true
-	if DictionaryData.HiraCheck9 == true and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck9 == true and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = false
 	#if DictionaryData.HiraCheck10 == false and DictionaryData.ColorDict == 1:
 		#$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = true
 	#if DictionaryData.HiraCheck10 == true and DictionaryData.ColorDict == 1:
 		#$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = false
 
-	if DictionaryData.KataCheck1 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck1 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = true
-	if DictionaryData.KataCheck1 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck1 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = false
-	if DictionaryData.KataCheck2 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck2 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = true
-	if DictionaryData.KataCheck2 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck2 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = false
-	if DictionaryData.KataCheck3 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck3 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = true
-	if DictionaryData.KataCheck3 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck3 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = false
-	if DictionaryData.KataCheck4 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck4 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = true
-	if DictionaryData.KataCheck4 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck4 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = false
-	if DictionaryData.KataCheck5 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck5 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = true
-	if DictionaryData.KataCheck5 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck5 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = false
-	if DictionaryData.KataCheck6 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck6 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = true
-	if DictionaryData.KataCheck6 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck6 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = false
-	if DictionaryData.KataCheck7 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck7 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = true
-	if DictionaryData.KataCheck7 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck7 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = false
-	if DictionaryData.KataCheck8 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck8 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = true
-	if DictionaryData.KataCheck8 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck8 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = false
-	if DictionaryData.KataCheck9 == false and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck9 == false and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = true
-	if DictionaryData.KataCheck9 == true and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck9 == true and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = false
 	#if DictionaryData.KataCheck10 == false and DictionaryData.ColorDict == 2:
 		#$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = true
 	#if DictionaryData.KataCheck10 == true and DictionaryData.ColorDict == 2:
 		#$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = false
 
-	if DictionaryData.KanjiCheck1 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck1 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = true
-	if DictionaryData.KanjiCheck1 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck1 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = false
-	if DictionaryData.KanjiCheck2 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck2 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = true
-	if DictionaryData.KanjiCheck2 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck2 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = false
-	if DictionaryData.KanjiCheck3 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck3 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = true
-	if DictionaryData.KanjiCheck3 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck3 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = false
-	if DictionaryData.KanjiCheck4 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck4 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = true
-	if DictionaryData.KanjiCheck4 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck4 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = false
-	if DictionaryData.KanjiCheck5 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck5 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = true
-	if DictionaryData.KanjiCheck5 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck5 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = false
-	if DictionaryData.KanjiCheck6 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck6 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = true
-	if DictionaryData.KanjiCheck6 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck6 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = false
-	if DictionaryData.KanjiCheck7 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck7 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = true
-	if DictionaryData.KanjiCheck7 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck7 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = false
-	if DictionaryData.KanjiCheck8 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck8 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = true
-	if DictionaryData.KanjiCheck8 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck8 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = false
-	if DictionaryData.KanjiCheck9 == false and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck9 == false and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = true
-	if DictionaryData.KanjiCheck9 == true and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck9 == true and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = false
 
-	if DictionaryData.VocabCheck1 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck1 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = true
-	if DictionaryData.VocabCheck1 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck1 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.disabled = false
-	if DictionaryData.VocabCheck2 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck2 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = true
-	if DictionaryData.VocabCheck2 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck2 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.disabled = false
-	if DictionaryData.VocabCheck3 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck3 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = true
-	if DictionaryData.VocabCheck3 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck3 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.disabled = false
-	if DictionaryData.VocabCheck4 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck4 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = true
-	if DictionaryData.VocabCheck4 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck4 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.disabled = false
-	if DictionaryData.VocabCheck5 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck5 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = true
-	if DictionaryData.VocabCheck5 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck5 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.disabled = false
-	if DictionaryData.VocabCheck6 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck6 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = true
-	if DictionaryData.VocabCheck6 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck6 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.disabled = false
-	if DictionaryData.VocabCheck7 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck7 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = true
-	if DictionaryData.VocabCheck7 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck7 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.disabled = false
-	if DictionaryData.VocabCheck8 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck8 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = true
-	if DictionaryData.VocabCheck8 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck8 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.disabled = false
-	if DictionaryData.VocabCheck9 == false and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck9 == false and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = true
-	if DictionaryData.VocabCheck9 == true and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck9 == true and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.disabled = false
 
 
@@ -375,88 +375,88 @@ func _text_switcher():
 
 func _completed_level():
 	var StyleBoxCompletedN = load("res://Assets/Tres/TemplateButtons/Completed_Button_N.tres")
-	if DictionaryData.HiraCheck1 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck1 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck2 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck2 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck3 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck3 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck4 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck4 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck5 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck5 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck6 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck6 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck7 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck7 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck8 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck8 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck9 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck9 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.HiraCheck10 and DictionaryData.ColorDict == 1:
+	if SaveGame.HiraCheck10 and DictionaryData.ColorDict == 1:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.add_theme_stylebox_override("normal", StyleBoxCompletedN)
 
-	if DictionaryData.KataCheck1 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck1 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck2 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck2 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck3 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck3 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck4 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck4 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck5 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck5 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck6 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck6 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck7 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck7 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck8 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck8 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck9 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck9 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KataCheck10 and DictionaryData.ColorDict == 2:
+	if SaveGame.KataCheck10 and DictionaryData.ColorDict == 2:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.add_theme_stylebox_override("normal", StyleBoxCompletedN)
 
-	if DictionaryData.KanjiCheck1 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck1 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck2 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck2 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck3 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck3 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck4 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck4 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck5 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck5 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck6 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck6 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck7 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck7 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck8 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck8 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck9 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck9 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.KanjiCheck10 and DictionaryData.ColorDict == 3:
+	if SaveGame.KanjiCheck10 and DictionaryData.ColorDict == 3:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.add_theme_stylebox_override("normal", StyleBoxCompletedN)
 
-	if DictionaryData.VocabCheck1 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck1 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck2 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck2 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_2/Level_Button_2.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck3 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck3 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_3/Level_Button_3.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck4 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck4 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_4/Level_Button_4.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck5 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck5 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_5/Level_Button_5.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck6 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck6 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_6/Level_Button_6.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck7 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck7 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_7/Level_Button_7.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck8 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck8 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_8/Level_Button_8.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck9 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck9 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_9/Level_Button_9.add_theme_stylebox_override("normal", StyleBoxCompletedN)
-	if DictionaryData.VocabCheck10 and DictionaryData.ColorDict == 4:
+	if SaveGame.VocabCheck10 and DictionaryData.ColorDict == 4:
 		$OG/ScrollContainer2/VBoxContainer/Empty_Node_10/Level_Button_10.add_theme_stylebox_override("normal", StyleBoxCompletedN)
 
 

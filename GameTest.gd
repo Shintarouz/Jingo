@@ -27,144 +27,163 @@ func _on_answer_line_edit_text_submitted(new_text):
 
 
 func _level_completer():
-	if DictionaryData.GameDict == 1:
-		if DictionaryData.HiraCheck1 == false:
-			DictionaryData.Coins += 5
-			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck1 = true
-		else:
-			DictionaryData.Coins += 1
+	if DictionaryData.GameDict == 1 and SaveGame.HiraCheck1 == false:
+		DictionaryData.Coins += 5
+		DictionaryData.ProgressBarValue1 +=10
+		SaveGame.HiraCheck1 = true
+		SaveGame.save()
+	else:
+		DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 2:
-		if DictionaryData.HiraCheck2 == false:
+		if SaveGame.HiraCheck2 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck2 = true
+			SaveGame.HiraCheck2 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 3:
-		if DictionaryData.HiraCheck3 == false:
+		if SaveGame.HiraCheck3 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck3 = true
+			SaveGame.HiraCheck3 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 4:
-		if DictionaryData.HiraCheck4 == false:
+		if SaveGame.HiraCheck4 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck4 = true
+			SaveGame.HiraCheck4 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 5:
-		if DictionaryData.HiraCheck5 == false:
+		if SaveGame.HiraCheck5 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck5 = true
+			SaveGame.HiraCheck5 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 6:
-		if DictionaryData.HiraCheck6 == false:
+		if SaveGame.HiraCheck6 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck6 = true
+			SaveGame.HiraCheck6 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 7:
-		if DictionaryData.HiraCheck7 == false:
+		if SaveGame.HiraCheck7 == false:
 			DictionaryData.Coins += 5
-			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck7 = true
+			DictionaryData.SaveGame +=10
+			SaveGame.HiraCheck7 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 8:
-		if DictionaryData.HiraCheck8 == false:
+		if SaveGame.HiraCheck8 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck8 = true
+			SaveGame.HiraCheck8 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 9:
-		if DictionaryData.HiraCheck9 == false:
+		if SaveGame.HiraCheck9 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck9 = true
+			SaveGame.HiraCheck9 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 10:
-		if DictionaryData.HiraCheck10 == false:
+		if SaveGame.HiraCheck10 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue1 +=10
-			DictionaryData.HiraCheck10 = true
+			SaveGame.HiraCheck10 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 11:
-		if DictionaryData.KataCheck1 == false:
+		if SaveGame.KataCheck1 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck1 = true
+			SaveGame.KataCheck1 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 12:
-		if DictionaryData.KataCheck2 == false:
+		if SaveGame.KataCheck2 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck2 = true
+			SaveGame.KataCheck2 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 13:
-		if DictionaryData.KataCheck3 == false:
+		if SaveGame.KataCheck3 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck3 = true
+			SaveGame.KataCheck3 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 14:
-		if DictionaryData.KataCheck4 == false:
+		if SaveGame.KataCheck4 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck4 = true
+			SaveGame.KataCheck4 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 15:
-		if DictionaryData.KataCheck5 == false:
+		if SaveGame.KataCheck5 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck5 = true
+			SaveGame.KataCheck5 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 16:
-		if DictionaryData.KataCheck6 == false:
+		if SaveGame.KataCheck6 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck6 = true
+			SaveGame.KataCheck6 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 17:
-		if DictionaryData.KataCheck7 == false:
+		if SaveGame.KataCheck7 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck7 = true
+			SaveGame.KataCheck7 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 18:
-		if DictionaryData.KataCheck8 == false:
+		if SaveGame.KataCheck8 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck8 = true
+			SaveGame.KataCheck8 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 19:
-		if DictionaryData.KataCheck9 == false:
+		if SaveGame.KataCheck9 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck9 = true
+			SaveGame.KataCheck9 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 	if DictionaryData.GameDict == 20:
-		if DictionaryData.KataCheck10 == false:
+		if SaveGame.KataCheck10 == false:
 			DictionaryData.Coins += 5
 			DictionaryData.ProgressBarValue2 +=10
-			DictionaryData.KataCheck10 = true
+			SaveGame.KataCheck10 = true
+			SaveGame.save()
 		else:
 			DictionaryData.Coins += 1
 
