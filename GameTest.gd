@@ -250,7 +250,7 @@ func _game_mode_picker():
 		DictionaryData.hira_yayuyo,
 		DictionaryData.hira_wanwo,
 		DictionaryData.Test10,
-
+		#10 - hiragana
 		DictionaryData.kata_aiueo,
 		DictionaryData.kata_kakikukeko,
 		DictionaryData.kata_sashisuseso,

@@ -1,11 +1,15 @@
 extends Node
 
 var Coins : int
+var EXP : int
+var PlayerLevel : int
 
 var ProgressBarValue1 : int
 var ProgressBarValue2 : int
 var ProgressBarValue3 : int
 var ProgressBarValue4 : int
+
+var TutorialCheck1 : bool
 
 var HiraCheck1: bool
 var HiraCheck2: bool
@@ -56,7 +60,7 @@ var VocabCheck10 : bool
 
 
 func _ready():
-	var JsonFile = FileAccess.open("res://savegame.json", FileAccess.READ)
+	var JsonFile = FileAccess.open("res://Data/savegame.json", FileAccess.READ)
 	var JsonString = JsonFile.get_as_text()
 	JsonFile.close()
 	
@@ -64,7 +68,9 @@ func _ready():
 	var Data = JSON.parse_string(JsonString)
 	print(Data)
 	Coins = Data.Coins
-
+	EXP = Data.EXP
+	PlayerLevel = Data.PlayerLevel
+	
 	ProgressBarValue1 = Data.ProgressBarValue1
 	ProgressBarValue2 = Data.ProgressBarValue2
 	ProgressBarValue3 = Data.ProgressBarValue3
@@ -91,28 +97,28 @@ func _ready():
 	KataCheck8 = Data.KataCheck8
 	KataCheck9 = Data.KataCheck9
 	KataCheck10 = Data.KataCheck10
-#
-	#KanjiCheck1 = Data.KanjiCheck1
-	#KanjiCheck2 = Data.KanjiCheck2
-	#KanjiCheck3 = Data.KanjiCheck3
-	#KanjiCheck4 = Data.KanjiCheck4
-	#KanjiCheck5 = Data.KanjiCheck5
-	#KanjiCheck6 = Data.KanjiCheck6
-	#KanjiCheck7 = Data.KanjiCheck7
-	#KanjiCheck8 = Data.KanjiCheck8
-	#KanjiCheck9 = Data.KanjiCheck9
-	#KanjiCheck10 = Data.KanjiCheck10
 
-	#VocabCheck1 = Data.VocabCheck1
-	#VocabCheck2 = Data.VocabCheck2
-	#VocabCheck3 = Data.VocabCheck3
-	#VocabCheck4 = Data.VocabCheck4
-	#VocabCheck5 = Data.VocabCheck5
-	#VocabCheck6 = Data.VocabCheck6
-	#VocabCheck7 = Data.VocabCheck7
-	#VocabCheck8 = Data.VocabCheck8
-	#VocabCheck9 = Data.VocabCheck9
-	#VocabCheck10 = Data.VocabCheck10
+	KanjiCheck1 = Data.KanjiCheck1
+	KanjiCheck2 = Data.KanjiCheck2
+	KanjiCheck3 = Data.KanjiCheck3
+	KanjiCheck4 = Data.KanjiCheck4
+	KanjiCheck5 = Data.KanjiCheck5
+	KanjiCheck6 = Data.KanjiCheck6
+	KanjiCheck7 = Data.KanjiCheck7
+	KanjiCheck8 = Data.KanjiCheck8
+	KanjiCheck9 = Data.KanjiCheck9
+	KanjiCheck10 = Data.KanjiCheck10
+
+	VocabCheck1 = Data.VocabCheck1
+	VocabCheck2 = Data.VocabCheck2
+	VocabCheck3 = Data.VocabCheck3
+	VocabCheck4 = Data.VocabCheck4
+	VocabCheck5 = Data.VocabCheck5
+	VocabCheck6 = Data.VocabCheck6
+	VocabCheck7 = Data.VocabCheck7
+	VocabCheck8 = Data.VocabCheck8
+	VocabCheck9 = Data.VocabCheck9
+	VocabCheck10 = Data.VocabCheck10
 
 
 
@@ -120,11 +126,15 @@ func _ready():
 func save():
 	var datatest = {
 		"Coins" : Coins,
+		"EXP" : EXP,
+		"PlayerLevel" : PlayerLevel,
 		
 		"ProgressBarValue1" : ProgressBarValue1,
 		"ProgressBarValue2" : ProgressBarValue2,
 		"ProgressBarValue3" : ProgressBarValue3,
 		"ProgressBarValue4" : ProgressBarValue4,
+		
+		"TutorialCheck1" : TutorialCheck1,
 		
 		"HiraCheck1" : HiraCheck1,
 		"HiraCheck2" : HiraCheck2,
@@ -159,28 +169,28 @@ func save():
 		"KanjiCheck9" : KanjiCheck9,
 		"KanjiCheck10" : KanjiCheck10,
 		
-		#"VocabCheck1 ": VocabCheck1,
-		#"VocabCheck2 ": VocabCheck2,
-		#"VocabCheck3 ": VocabCheck3,
-		#"VocabCheck4 ": VocabCheck4,
-		#"VocabCheck5 ": VocabCheck5,
-		#"VocabCheck6 ": VocabCheck6,
-		#"VocabCheck7 ": VocabCheck7,
-		#"VocabCheck8 ": VocabCheck8,
-		#"VocabCheck9 ": VocabCheck9, 
-		#"VocabCheck10" : VocabCheck10
+		"VocabCheck1": VocabCheck1,
+		"VocabCheck2": VocabCheck2,
+		"VocabCheck3": VocabCheck3,
+		"VocabCheck4": VocabCheck4,
+		"VocabCheck5": VocabCheck5,
+		"VocabCheck6": VocabCheck6,
+		"VocabCheck7": VocabCheck7,
+		"VocabCheck8": VocabCheck8,
+		"VocabCheck9": VocabCheck9, 
+		"VocabCheck10" : VocabCheck10
 
 	}
 	
 	var JsonString = JSON.stringify(datatest)
-	var JsonFile = FileAccess.open("res://savegame.json", FileAccess.WRITE)
+	var JsonFile = FileAccess.open("res://Data/savegame.json", FileAccess.WRITE)
 	JsonFile.store_line(JsonString)
 	JsonFile.close()
 
 
 
 func _on_load_pressed():
-	var JsonFile = FileAccess.open("res://savegame.json", FileAccess.READ)
+	var JsonFile = FileAccess.open("res://Data/savegame.json", FileAccess.READ)
 	var JsonString = JsonFile.get_as_text()
 	JsonFile.close()
 	
@@ -191,11 +201,15 @@ func _on_load_pressed():
 
 func _on_reset_pressed():
 	Coins = 0
+	EXP = 0
+	PlayerLevel = 0
 
 	ProgressBarValue1 = 0
 	ProgressBarValue2 = 0
 	ProgressBarValue3 = 0
 	ProgressBarValue4 = 0
+
+	TutorialCheck1 = false
 
 	HiraCheck1 = false
 	HiraCheck2 = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://wsqm8vkd045j"]
+[gd_scene load_steps=31 format=3 uid="uid://wsqm8vkd045j"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Menu.gd" id="1_anjq2"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_fv2qr"]
@@ -11,6 +11,7 @@
 [ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="10_mwqni"]
 [ext_resource type="StyleBox" uid="uid://decp6r3a3avb1" path="res://Assets/Tres/HiraButtons/Hira_Button_Hover.tres" id="11_jvs6w"]
 [ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="12_gp7cv"]
+[ext_resource type="PackedScene" uid="uid://bntx4knedgujk" path="res://Tutorials/tutorial_test.tscn" id="13_rrend"]
 [ext_resource type="StyleBox" uid="uid://bslup4t56dl24" path="res://Assets/Tres/TemplateButtons/Disabled_Button_N.tres" id="13_s1p7r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixefr"]
@@ -1148,6 +1149,9 @@ theme_override_styles/pressed = ExtResource("12_gp7cv")
 theme_override_styles/disabled = ExtResource("13_s1p7r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
 text = "わ"
+
+[node name="TutorialTest" parent="." instance=ExtResource("13_rrend")]
+visible = false
 
 [connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control/Alpha_Button_1" to="." method="_on_hiragana_button_pressed"]
 [connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control2/Alpha_Button_2" to="." method="_on_katakana_button_pressed"]
