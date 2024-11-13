@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_0lu7s"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_ndvvk"]
-[ext_resource type="PackedScene" uid="uid://c5aadmtq6cb3s" path="res://Tutorials/introduction_tutorial.tscn" id="3_3pvcj"]
+[ext_resource type="PackedScene" path="res://Tutorials/introduction_tutorial.tscn" id="3_3pvcj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0yhde"]
 
@@ -80,6 +80,7 @@ text = "v4.03
 Game"
 
 [node name="IntroductionTutorial" parent="." instance=ExtResource("3_3pvcj")]
+visible = false
 
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_5" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_2" to="." method="_on_options_pressed"]

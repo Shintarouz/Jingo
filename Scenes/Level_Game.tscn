@@ -14,7 +14,7 @@ modulate_color = Color(0.972549, 0.690196, 0.823529, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4jbw"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer2" type="CanvasLayer"]
 script = ExtResource("1_kdyac")
 
 [node name="Control" type="Control" parent="."]
