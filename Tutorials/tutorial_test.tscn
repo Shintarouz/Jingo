@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bntx4knedgujk"]
+[gd_scene load_steps=3 format=3 uid="uid://bntx4knedgujk"]
 
 [ext_resource type="StyleBox" uid="uid://cokwr0l2xhlwr" path="res://Assets/Tres/HiraButtons/Hira_Button_Pressed.tres" id="1_e2ke1"]
+[ext_resource type="Script" path="res://Tutorials/tutorial_test.gd" id="1_xmlvu"]
 
 [node name="TutorialTest" type="CanvasLayer"]
+script = ExtResource("1_xmlvu")
 
 [node name="Template_Node" type="Control" parent="."]
 custom_minimum_size = Vector2(1080, 2400)
@@ -19,7 +21,33 @@ offset_bottom = 1200.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
-offset_right = 528.0
-offset_bottom = 880.0
+[node name="Panel1" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 616.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = ExtResource("1_e2ke1")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3032.0
+offset_bottom = -2432.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_e2ke1")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 256.0
+offset_right = 592.0
+offset_bottom = 544.0
+text = "back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

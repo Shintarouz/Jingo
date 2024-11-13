@@ -6,8 +6,10 @@ var check2 = false
 var dict
 var dictCopy
 var count:int
+@onready var DiffPanel = get_node("Panel")
 
 func _ready():
+	ShopMenuOpenAnimation()
 	_first_time_check()
 	_furigana_mode()
 	_game_mode_picker()
@@ -444,3 +446,11 @@ func _on_label_gui_input(event):
 			$Panel/Label5.show()
 		if count == 5:
 			$Panel.hide()
+
+func ShopMenuOpenAnimation():
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_QUAD)
+	var sprite_2d = DiffPanel
+	var position = Vector2(131, 257)
+	var duration = 1
+	tween.tween_property(sprite_2d, "position", position, duration)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://u7x670nudcup"]
+[gd_scene load_steps=8 format=3 uid="uid://u7x670nudcup"]
 
 [ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_0rxj2"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_qttxf"]
+[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="3_1dpp0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mh1p"]
 
@@ -94,6 +95,12 @@ theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_70mbc")
 text = "Main Menu"
+
+[node name="Label" type="Label" parent="."]
+offset_top = -240.0
+offset_right = 1080.0
+offset_bottom = -34.0
+theme_override_styles/normal = ExtResource("3_1dpp0")
 
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_1" to="." method="_on_hiragana_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_2" to="." method="_on_katakana_pressed"]

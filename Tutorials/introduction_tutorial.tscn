@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5aadmtq6cb3s"]
+
+[ext_resource type="Script" path="res://Tutorials/introduction_tutorial.gd" id="1_nupi6"]
+[ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="1_typf8"]
+
+[node name="IntroductionTutorial" type="CanvasLayer"]
+script = ExtResource("1_nupi6")
+
+[node name="Template" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -1200.0
+offset_right = 540.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Template"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 312.0
+offset_right = 905.0
+offset_bottom = 824.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("1_typf8")
+horizontal_alignment = 1
+vertical_alignment = 1

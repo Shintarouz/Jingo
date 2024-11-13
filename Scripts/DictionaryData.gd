@@ -4,10 +4,6 @@ extends Node2D
 var ColorDict = 1
 var GameDict
 var TextCheck = 1
-var ProgressBarValue1 = 0
-var ProgressBarValue2 = 0
-var ProgressBarValue3 = 0
-var ProgressBarValue4 = 0
 var RomajiOption = true
 var FuriganaMode = true
 var FirstTimeKanjiCheck = false
@@ -1871,5 +1867,3 @@ var JLPTN5 = [
 	}
 ]
 
-
-pass

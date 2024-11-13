@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://curaf3kfm3ni6"]
+[gd_scene load_steps=9 format=3 uid="uid://curaf3kfm3ni6"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_0lu7s"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="1_ndvvk"]
+[ext_resource type="PackedScene" uid="uid://c5aadmtq6cb3s" path="res://Tutorials/introduction_tutorial.tscn" id="3_3pvcj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0yhde"]
 
@@ -77,6 +78,8 @@ theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6em2n")
 text = "v4.03
 Game"
+
+[node name="IntroductionTutorial" parent="." instance=ExtResource("3_3pvcj")]
 
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_5" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/menu_button_2" to="." method="_on_options_pressed"]
