@@ -13,6 +13,7 @@ func _ready():
 	$ColorRect1.modulate = Color.GREEN
 	$ColorRect2.modulate = Color.RED
 
+
 func _on_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
 		$ColorRect2.visible = true

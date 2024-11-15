@@ -4,6 +4,9 @@ var dict
 var dictCopy
 
 func _ready():
+	PopUpAnimation("Control/NavBarTop", Vector2(0, 0), 1)
+	PopUpAnimation("Control/NavBarBottom", Vector2(0, 2120), 1)
+	PopUpAnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
 	_game_mode_picker()
 	_menu_color_picker()
 	dictCopy = dict.duplicate(true)
@@ -368,3 +371,30 @@ func _menu_color_picker():
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Level_Menu.tscn")
+
+func PopUpAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "position", target_position, duration)
+	else:
+		print("Panel node not found at path: ", panel_path)
+
+func PopOutAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "position", target_position, duration)
+	else:
+		print("Panel node not found at path: ", panel_path)
+
+func PopUpAnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "scale", target_scale, duration)
+	else:
+		print("Panel node not found at path: ", panel_path)

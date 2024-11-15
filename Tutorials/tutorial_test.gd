@@ -2,7 +2,7 @@ extends CanvasLayer
 
 
 func _ready():
-	DictionaryData.PopUpAnimation("Panel1", Vector2(0, 1872), 1)
+	PopUpAnimation("Panel1", Vector2(0, 1872), 1)
 	PopUpAnimation("Panel2", Vector2(0, -200), 1)
 
 func _process(delta):
