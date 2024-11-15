@@ -20,7 +20,6 @@ func end():
 
 func _on_label_gui_input(event):
 	if event is InputEventMouseButton:
-		await get_tree().create_timer(0.2).timeout
 		count += 1
 		print(count)
 		if count == 1:
