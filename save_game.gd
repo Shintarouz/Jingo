@@ -67,9 +67,11 @@ func _ready():
 	# from json string to dictionary
 	var Data = JSON.parse_string(JsonString)
 	print(Data)
+	
 	Coins = Data.Coins
 	EXP = Data.EXP
 	PlayerLevel = Data.PlayerLevel
+	TutorialCheck1 = Data.TutorialCheck1
 	
 	ProgressBarValue1 = Data.ProgressBarValue1
 	ProgressBarValue2 = Data.ProgressBarValue2

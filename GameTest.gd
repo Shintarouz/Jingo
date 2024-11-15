@@ -7,6 +7,7 @@ func _ready():
 	PopUpAnimation("Control/NavBarTop", Vector2(0, 0), 1)
 	PopUpAnimation("Control/NavBarBottom", Vector2(0, 2120), 1)
 	PopUpAnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
+	PopInAnimation("Control/AnswerVbox", Vector2(40, 1272), 1)
 	_game_mode_picker()
 	_menu_color_picker()
 	dictCopy = dict.duplicate(true)
@@ -17,7 +18,8 @@ func _on_answer_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
 		mistakes += 1
 		#if mistakes == 3:
-	if new_text == str(",").join(dictCopy[0]["answer"]):
+	if new_text == str(",").join(dictCopy[0]["answer"]) and dictCopy.size() > 0:
+		FinishAnimation("Control/AnswerVbox/AnswerLineEdit", Color.GREEN, 0.5)
 		$Control/NavBarTop/ProgressBar.value += 20
 		$Control/AnswerVbox/AnswerLineEdit.text = ""
 		mistakes = 0
@@ -27,7 +29,6 @@ func _on_answer_line_edit_text_submitted(new_text):
 	if dictCopy.size() == 0:
 		_level_completer()
 		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
-
 
 func _level_completer():
 	if DictionaryData.GameDict == 1:
@@ -396,5 +397,25 @@ func PopUpAnimationScale(panel_path: String, target_scale: Vector2, duration: fl
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "scale", target_scale, duration)
+	else:
+		print("Panel node not found at path: ", panel_path)
+
+func PopInAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "position", target_position, duration)
+	else:
+		print("Panel node not found at path: ", panel_path)
+
+func FinishAnimation(panel_path: String, target_color: Color, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "modulate", target_color, duration)
+		target_color = Color(1, 1, 1, 1)
+		tween.tween_property(panel, "modulate", target_color, duration)
 	else:
 		print("Panel node not found at path: ", panel_path)
