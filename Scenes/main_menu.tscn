@@ -76,7 +76,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6em2n")
-text = "v4.03
+text = "v4.04
 Game"
 
 [node name="IntroductionTutorial" parent="." instance=ExtResource("3_3pvcj")]

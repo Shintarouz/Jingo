@@ -1,7 +1,6 @@
 extends CanvasLayer
 var count : int
 
-
 func _ready():
 	TutorialCheck()
 	$Template/Label.text = "Welcome to Jingo, "

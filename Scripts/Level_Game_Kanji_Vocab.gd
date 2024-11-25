@@ -433,19 +433,15 @@ func _on_label_gui_input(event):
 		count += 1
 		print(count)
 		if count == 1:
-			$Panel/Label.hide()
-			$Panel/Label2.show()
+			$Panel/Label.text = "Welcome to Kanji level 1! + Here you will find 2 answer lines + One will need the translation and the other will require the Romaji of the word."
 		if count == 2:
-			$Panel/Label2.hide()
-			$Panel/Label3.show()
+			$Panel/Label.text = "Romaji is simply using English letters for Japanese words." + "Example : ありがとう + Translation : Thank you + Romaji : Arigatou"
 		if count == 3:
-			$Panel/Label3.hide()
-			$Panel/Label4.show()
+			$Panel/Label.text = "test2"
 		if count == 4:
-			$Panel/Label4.hide()
-			$Panel/Label5.show()
+			$Panel/Label.text = "test3"
 		if count == 5:
-			$Panel.hide()
+			$Panel/Label.text = "test4"
 
 func ShopMenuOpenAnimation():
 	var tween := create_tween()
