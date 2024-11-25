@@ -13,7 +13,8 @@ func _ready():
 	dictCopy = dict.duplicate(true)
 	dictCopy.shuffle()
 	$Control/QuestionControl/Label.text = str(",").join(dictCopy[0]["question"])
-
+	AudioSetter()
+	$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/download.mp3")
 func _on_answer_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
 		mistakes += 1
@@ -419,3 +420,10 @@ func FinishAnimation(panel_path: String, target_color: Color, duration: float = 
 		tween.tween_property(panel, "modulate", target_color, duration)
 	else:
 		print("Panel node not found at path: ", panel_path)
+
+
+func _on_sound_button_pressed():
+	$Control/SoundButton/AudioStreamPlayer.play()
+
+func AudioSetter():
+	pass

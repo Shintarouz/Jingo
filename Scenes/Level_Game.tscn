@@ -194,6 +194,17 @@ theme_override_styles/pressed = ExtResource("6_hjxww")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_s4jbw")
 text = "Check"
 
+[node name="SoundButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 1592.0
+offset_right = 464.0
+offset_bottom = 1824.0
+theme_override_font_sizes/font_size = 111
+text = "Sound but"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/SoundButton"]
+
 [node name="MeetPanels" type="Panel" parent="."]
 visible = false
 offset_left = 40.0
@@ -403,3 +414,4 @@ offset_bottom = 1520.0
 
 [connection signal="pressed" from="Control/NavBarTop/Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="text_submitted" from="Control/AnswerVbox/AnswerLineEdit" to="." method="_on_answer_line_edit_text_submitted"]
+[connection signal="pressed" from="Control/SoundButton" to="." method="_on_sound_button_pressed"]
