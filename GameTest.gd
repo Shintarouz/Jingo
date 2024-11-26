@@ -13,8 +13,9 @@ func _ready():
 	dictCopy = dict.duplicate(true)
 	dictCopy.shuffle()
 	$Control/QuestionControl/Label.text = str(",").join(dictCopy[0]["question"])
-	AudioSetter()
-	$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/download.mp3")
+	AudioLoader() # sets Riashuu audio mp3
+	
+	
 func _on_answer_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
 		mistakes += 1
@@ -27,6 +28,9 @@ func _on_answer_line_edit_text_submitted(new_text):
 		dictCopy.remove_at(0)
 		if dictCopy.size() > 0:
 			$Control/QuestionControl/Label.text = str(",").join(dictCopy[0]["question"])
+			AudioLoader()
+			await get_tree().create_timer(0.5).timeout
+			$Control/SoundButton/AudioStreamPlayer.play()
 	if dictCopy.size() == 0:
 		_level_completer()
 		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
@@ -389,8 +393,6 @@ func PopOutAnimation(panel_path: String, target_position: Vector2, duration: flo
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "position", target_position, duration)
-	else:
-		print("Panel node not found at path: ", panel_path)
 
 func PopUpAnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
 	var panel = get_node(panel_path)
@@ -398,8 +400,6 @@ func PopUpAnimationScale(panel_path: String, target_scale: Vector2, duration: fl
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "scale", target_scale, duration)
-	else:
-		print("Panel node not found at path: ", panel_path)
 
 func PopInAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
 	var panel = get_node(panel_path)
@@ -407,8 +407,6 @@ func PopInAnimation(panel_path: String, target_position: Vector2, duration: floa
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "position", target_position, duration)
-	else:
-		print("Panel node not found at path: ", panel_path)
 
 func FinishAnimation(panel_path: String, target_color: Color, duration: float = 1.0):
 	var panel = get_node(panel_path)
@@ -418,12 +416,113 @@ func FinishAnimation(panel_path: String, target_color: Color, duration: float = 
 		tween.tween_property(panel, "modulate", target_color, duration)
 		target_color = Color(1, 1, 1, 1)
 		tween.tween_property(panel, "modulate", target_color, duration)
-	else:
-		print("Panel node not found at path: ", panel_path)
 
 
 func _on_sound_button_pressed():
+	AudioLoader()
 	$Control/SoundButton/AudioStreamPlayer.play()
 
-func AudioSetter():
-	pass
+func AudioLoader():
+	var test_string = str(",").join(dictCopy[0]["answer"])
+	match test_string:
+		"a" :
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/A.mp3")
+		"i":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/I.mp3")
+		"e":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/E.mp3")
+		"u":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/U.mp3")
+		"o":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/O.mp3")
+
+		"ka":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/KA.mp3")
+		"ki":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/KI.mp3")
+		"ke":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/KE.mp3")
+		"ku":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/KU.mp3")
+		"ko":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/KO.mp3")
+
+		"sa":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/SA.mp3")
+		"shi":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/SHI.mp3")
+		"se":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/SE.mp3")
+		"su":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/SU.mp3")
+		"so":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/SO.mp3")
+
+		"ta":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/TA.mp3")
+		"chi":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/CHI.mp3")
+		"te":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/TE.mp3")
+		"tsu":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/TSU.mp3")
+		"to":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/TO.mp3")
+
+		"na":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/NA.mp3")
+		"ni":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/NI.mp3")
+		"ne":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/NE.mp3")
+		"nu":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/NU.mp3")
+		"no":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/NO.mp3")
+
+		"ha":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/HA.mp3")
+		"hi":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/HI.mp3")
+		"he":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/HE.mp3")
+		"fu":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/FU.mp3")
+		"ho":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/HO.mp3")
+
+		"ma":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/MA.mp3")
+		"mi":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/MI.mp3")
+		"me":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/ME.mp3")
+		"mu":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/MU.mp3")
+		"mo":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/MO.mp3")
+
+		"ya":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/YA.mp3")
+		"yu":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/YU.mp3")
+		"yo":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/YO.mp3")
+
+		"ra":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/RA.mp3")
+		"ri":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/RI.mp3")
+		"re":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/RE.mp3")
+		"ru":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/RU.mp3")
+		"ro":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/RO.mp3")
+
+		"w":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/W.mp3")
+		"wo":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/WO.mp3")
+		"n":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/N.mp3")
