@@ -38,6 +38,7 @@ func _on_answer_line_edit_text_submitted(new_text):
 	if dictCopy.size() == 0:
 		_level_completer()
 		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
+
 func _level_completer():
 	var hira_checks = ["HiraCheck1","HiraCheck2","HiraCheck3","HiraCheck4","HiraCheck5","HiraCheck6","HiraCheck7","HiraCheck8","HiraCheck9","HiraCheck10",]
 	var kata_checks = ["KataCheck1","KataCheck2","KataCheck3","KataCheck4","KataCheck5","KataCheck6","KataCheck7","KataCheck8","KataCheck9","KataCheck10",]

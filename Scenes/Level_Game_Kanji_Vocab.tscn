@@ -430,6 +430,7 @@ offset_right = 312.0
 offset_bottom = 1520.0
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 clip_children = 2
 custom_minimum_size = Vector2(100, 0)
 anchors_preset = 8

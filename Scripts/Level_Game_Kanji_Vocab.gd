@@ -128,195 +128,32 @@ func _answer_checker():
 				check1 = false
 
 func _level_completer():
-	if DictionaryData.GameDict == 21:
-		if SaveGame.KanjiCheck1 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck1 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
+	var kanji_checks = ["KanjiCheck1","KanjiCheck2","KanjiCheck3","KanjiCheck4","KanjiCheck5","KanjiCheck6","KanjiCheck7","KanjiCheck8","KanjiCheck9","KanjiCheck10",]
+	var vocab_checks = ["VocabCheck1","VocabCheck2","VocabCheck3","VocabCheck4","VocabCheck5","VocabCheck6","VocabCheck7","VocabCheck8","VocabCheck9","VocabCheck10",]
+	var game_dict = DictionaryData.GameDict
+	if game_dict in range(21, 31):
+		_process_check(kanji_checks[game_dict - 21], 5, 10, "pgbar_adder_3")
+	elif game_dict in range (31, 41):
+		_process_check(vocab_checks[game_dict - 31], 5, 10, "pgbar_adder_4")
 
-	if DictionaryData.GameDict == 22:
-		if SaveGame.KanjiCheck2 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck2 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 23:
-		if SaveGame.KanjiCheck3 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck3 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 24:
-		if SaveGame.KanjiCheck4 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck4 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 25:
-		if SaveGame.KanjiCheck5 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck5 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 26:
-		if SaveGame.KanjiCheck6 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck6 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 27:
-		if SaveGame.KanjiCheck7 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck7 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 28:
-		if SaveGame.KanjiCheck8 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck8 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 29:
-		if SaveGame.KanjiCheck9 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck9 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 30:
-		if SaveGame.KanjiCheck10 == false:
-			pgbar_adder_3(10)
-			coins_adder(5)
-			SaveGame.KanjiCheck10 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 31:
-		if SaveGame.VocabCheck1 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck1 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 32:
-		if SaveGame.VocabCheck2 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck2 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 33:
-		if SaveGame.VocabCheck3 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck3 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 34:
-		if SaveGame.VocabCheck4 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck4 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 35:
-		if SaveGame.VocabCheck5 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck5 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 36:
-		if SaveGame.VocabCheck6 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck6 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 37:
-		if SaveGame.VocabCheck7 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck7 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 38:
-		if SaveGame.VocabCheck8 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck8 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 39:
-		if SaveGame.VocabCheck9 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck9 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
-
-	if DictionaryData.GameDict == 40:
-		if SaveGame.VocabCheck10 == false:
-			pgbar_adder_4(10)
-			coins_adder(5)
-			SaveGame.VocabCheck10 = true
-			SaveGame.save()
-		else:
-			coins_adder(1)
+func _process_check(check_name, coins, progress, pgbar_function):
+	if not SaveGame.get(check_name):
+		SaveGame.set(check_name, true)
+		coins_adder(coins)
+		call(pgbar_function, progress)
+	else:
+		coins_adder(1)
+	SaveGame.save()
 
 func coins_adder(amount):
-	print("coins" + amount)
+	print("coins given :" + str(amount))
 	SaveGame.Coins += amount
 
 func pgbar_adder_3(amount):
-	DictionaryData.ProgressBarValue3 += amount
+	SaveGame.ProgressBarValue3 += amount
 
 func pgbar_adder_4(amount):
-	DictionaryData.ProgressBarValue4 += amount
+	SaveGame.ProgressBarValue4 += amount
 
 func _game_mode_picker():
 # TODO: moet nog verandert worden naar kanji!!
