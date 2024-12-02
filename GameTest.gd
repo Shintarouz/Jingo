@@ -4,10 +4,7 @@ var dict
 var dictCopy
 
 func _ready():
-	PopUpAnimation("Control/NavBarTop", Vector2(0, 0), 1)
-	PopUpAnimation("Control/NavBarBottom", Vector2(0, 2120), 1)
-	PopUpAnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
-	PopInAnimation("Control/AnswerVbox", Vector2(40, 1272), 1)
+	ReadyAnimations()
 	_game_mode_picker()
 	_menu_color_picker()
 	dictCopy = dict.duplicate(true)
@@ -16,6 +13,13 @@ func _ready():
 	AudioLoader() # sets Riashuu audio mp3
 	
 	
+func ReadyAnimations():
+	PopUpAnimation("Control/NavBarTop", Vector2(0, 0), 1)
+	PopUpAnimation("Control/NavBarBottom", Vector2(0, 2120), 1)
+	PopUpAnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
+	PopInAnimation("Control/AnswerVbox", Vector2(40, 1272), 1)
+	PopUpAnimationScale("Control/SoundButton", Vector2(1, 1), 1)
+
 func _on_answer_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
 		mistakes += 1
@@ -34,207 +38,224 @@ func _on_answer_line_edit_text_submitted(new_text):
 	if dictCopy.size() == 0:
 		_level_completer()
 		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
-
 func _level_completer():
-	if DictionaryData.GameDict == 1:
-		if SaveGame.HiraCheck1 == false:
-			SaveGame.HiraCheck1 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
+	var hira_checks = ["HiraCheck1","HiraCheck2","HiraCheck3","HiraCheck4","HiraCheck5","HiraCheck6","HiraCheck7","HiraCheck8","HiraCheck9","HiraCheck10",]
+	var kata_checks = ["KataCheck1","KataCheck2","KataCheck3","KataCheck4","KataCheck5","KataCheck6","KataCheck7","KataCheck8","KataCheck9","KataCheck10",]
+	var game_dict = DictionaryData.GameDict
+	if game_dict in range(1, 11):
+		_process_check(hira_checks[game_dict - 1], 5, 10, "pgbar_adder_1")
+	elif game_dict in range (11, 21):
+		_process_check(kata_checks[game_dict - 11], 5, 10, "pgbar_adder_2")
 
-	if DictionaryData.GameDict == 2:
-		if SaveGame.HiraCheck2 == false:
-			SaveGame.HiraCheck2 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
+func _process_check(check_name, coins, progress, pgbar_function):
+	if not SaveGame.get(check_name):
+		SaveGame.set(check_name, true)
+		coins_adder(coins)
+		call(pgbar_function, progress)
+	else:
+		coins_adder(1)
+	SaveGame.save()
 
-	if DictionaryData.GameDict == 3:
-		if SaveGame.HiraCheck3 == false:
-			SaveGame.HiraCheck3 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 4:
-		if SaveGame.HiraCheck4 == false:
-			SaveGame.HiraCheck4 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 5:
-		if SaveGame.HiraCheck5 == false:
-			SaveGame.HiraCheck5 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 6:
-		if SaveGame.HiraCheck6 == false:
-			SaveGame.HiraCheck6 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 7:
-		if SaveGame.HiraCheck7 == false:
-			SaveGame.HiraCheck7 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 8:
-		if SaveGame.HiraCheck8 == false:
-			SaveGame.HiraCheck8 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 9:
-		if SaveGame.HiraCheck9 == false:
-			SaveGame.HiraCheck9 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 10:
-		if SaveGame.HiraCheck10 == false:
-			SaveGame.HiraCheck10 = true
-			coins_adder(5)
-			pgbar_adder_1(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 11:
-		if SaveGame.KataCheck1 == false:
-			SaveGame.KataCheck1 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 12:
-		if SaveGame.KataCheck2 == false:
-			SaveGame.KataCheck2 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 13:
-		if SaveGame.KataCheck3 == false:
-			SaveGame.KataCheck3 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 14:
-		if SaveGame.KataCheck4 == false:
-			SaveGame.KataCheck4 = true
-			DictionaryData.Coins += 5
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 15:
-		if SaveGame.KataCheck5 == false:
-			SaveGame.KataCheck5 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 16:
-		if SaveGame.KataCheck6 == false:
-			SaveGame.KataCheck6 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 17:
-		if SaveGame.KataCheck7 == false:
-			SaveGame.KataCheck7 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 18:
-		if SaveGame.KataCheck8 == false:
-			SaveGame.KataCheck8 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 19:
-		if SaveGame.KataCheck9 == false:
-			SaveGame.KataCheck9 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
-
-	if DictionaryData.GameDict == 20:
-		if SaveGame.KataCheck10 == false:
-			SaveGame.KataCheck10 = true
-			coins_adder(5)
-			pgbar_adder_2(10)
-			SaveGame.save()
-		else:
-			coins_adder(1)
-			SaveGame.save()
+#func _level_completer():
+	#if DictionaryData.GameDict == 1:
+		#if SaveGame.HiraCheck1 == false:
+			#SaveGame.HiraCheck1 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 2:
+		#if SaveGame.HiraCheck2 == false:
+			#SaveGame.HiraCheck2 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 3:
+		#if SaveGame.HiraCheck3 == false:
+			#SaveGame.HiraCheck3 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 4:
+		#if SaveGame.HiraCheck4 == false:
+			#SaveGame.HiraCheck4 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 5:
+		#if SaveGame.HiraCheck5 == false:
+			#SaveGame.HiraCheck5 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 6:
+		#if SaveGame.HiraCheck6 == false:
+			#SaveGame.HiraCheck6 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 7:
+		#if SaveGame.HiraCheck7 == false:
+			#SaveGame.HiraCheck7 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 8:
+		#if SaveGame.HiraCheck8 == false:
+			#SaveGame.HiraCheck8 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 9:
+		#if SaveGame.HiraCheck9 == false:
+			#SaveGame.HiraCheck9 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 10:
+		#if SaveGame.HiraCheck10 == false:
+			#SaveGame.HiraCheck10 = true
+			#coins_adder(5)
+			#pgbar_adder_1(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 11:
+		#if SaveGame.KataCheck1 == false:
+			#SaveGame.KataCheck1 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 12:
+		#if SaveGame.KataCheck2 == false:
+			#SaveGame.KataCheck2 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 13:
+		#if SaveGame.KataCheck3 == false:
+			#SaveGame.KataCheck3 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 14:
+		#if SaveGame.KataCheck4 == false:
+			#SaveGame.KataCheck4 = true
+			#DictionaryData.Coins += 5
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 15:
+		#if SaveGame.KataCheck5 == false:
+			#SaveGame.KataCheck5 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 16:
+		#if SaveGame.KataCheck6 == false:
+			#SaveGame.KataCheck6 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 17:
+		#if SaveGame.KataCheck7 == false:
+			#SaveGame.KataCheck7 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 18:
+		#if SaveGame.KataCheck8 == false:
+			#SaveGame.KataCheck8 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 19:
+		#if SaveGame.KataCheck9 == false:
+			#SaveGame.KataCheck9 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
+#
+	#if DictionaryData.GameDict == 20:
+		#if SaveGame.KataCheck10 == false:
+			#SaveGame.KataCheck10 = true
+			#coins_adder(5)
+			#pgbar_adder_2(10)
+			#SaveGame.save()
+		#else:
+			#coins_adder(1)
+			#SaveGame.save()
 
 func coins_adder(amount):
 	print("coins given :" + str(amount))
