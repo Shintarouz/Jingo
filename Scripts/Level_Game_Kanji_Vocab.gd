@@ -22,6 +22,7 @@ func _ready():
 		$Control/AnswerVbox/RomajiLineEdit.visible = true
 	else:
 		$Control/AnswerVbox/RomajiLineEdit.visible = false
+	AudioLoader()
 
 func _first_time_check():
 	if DictionaryData.FirstTimeKanjiCheck == false:
@@ -151,9 +152,10 @@ func coins_adder(amount):
 
 func pgbar_adder_3(amount):
 	SaveGame.ProgressBarValue3 += amount
-
+	SaveGame.ScrollPositionValue3 += 300
 func pgbar_adder_4(amount):
 	SaveGame.ProgressBarValue4 += amount
+	SaveGame.ScrollPositionValue4 += 300
 
 func _game_mode_picker():
 # TODO: moet nog verandert worden naar kanji!!
@@ -178,9 +180,9 @@ func _game_mode_picker():
 	if DictionaryData.GameDict == 30:
 		dict = DictionaryData.hira_wanwo
 	if DictionaryData.GameDict == 31:
-		dict = DictionaryData.kata_aiueo
+		dict = DictionaryData.NOZW
 	if DictionaryData.GameDict == 32:
-		dict = DictionaryData.kata_kakikukeko
+		dict = DictionaryData.NOZW
 	if DictionaryData.GameDict == 33:
 		dict = DictionaryData.kata_sashisuseso
 	if DictionaryData.GameDict == 34:
@@ -233,6 +235,9 @@ func _menu_color_picker():
 		$Control/AnswerVbox/RomajiLineEdit.add_theme_stylebox_override("read_only", StyleBoxKanjiN)
 		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_uneditable_color",Color("74de76"))
 		$Control/QuestionControl/Label/Label.set("theme_override_colors/font_color",Color("940079"))
+		$Control/SoundButton.add_theme_stylebox_override("normal", StyleBoxKanjiN)
+		$Control/SoundButton.add_theme_stylebox_override("hover", StyleBoxKanjiH)
+		$Control/SoundButton.add_theme_stylebox_override("pressed", StyleBoxKanjiP)
 	if DictionaryData.ColorDict == 4:
 		var StyleBoxVocabN = load("res://Assets/Tres/VocabButtons/Vocab_Button_Normal.tres")
 		var StyleBoxVocabH = load("res://Assets/Tres/VocabButtons/Vocab_Button_Hover.tres")
@@ -240,29 +245,56 @@ func _menu_color_picker():
 		var StyleBoxVocabGradient = load("res://Assets/Tres/VocabButtons/Vocab_Gradient.tres")
 		var StyleBoxVocabProgressbarBg = load("res://Assets/Tres/VocabButtons/Vocab_Progressbar_Bg.tres")
 		var StyleBoxVocabProgressbarFill = load("res://Assets/Tres/VocabButtons/Vocab_Progressbar_Fill.tres")
-		$Control/NavBarTop.add_theme_stylebox_override("panel" ,StyleBoxVocabGradient)
 		$Control/NavBarBottom.add_theme_stylebox_override("panel" ,StyleBoxVocabGradient)
+		$Control/NavBarTop.add_theme_stylebox_override("panel" ,StyleBoxVocabGradient)
 		$Control/NavBarTop/ProgressBar.set("theme_override_styles/background", StyleBoxVocabProgressbarBg)
 		$Control/NavBarTop/ProgressBar.set("theme_override_styles/fill", StyleBoxVocabProgressbarFill)
-		$Control/QuestionControl/Label.add_theme_stylebox_override("normal", StyleBoxVocabN)
-		$Control/AnswerVbox/AnswerLineEdit.add_theme_stylebox_override("normal", StyleBoxVocabN)
 		$Control/NavBarTop/Back_Button.add_theme_stylebox_override("normal", StyleBoxVocabN)
 		$Control/NavBarTop/Back_Button.add_theme_stylebox_override("hover", StyleBoxVocabH)
 		$Control/NavBarTop/Back_Button.add_theme_stylebox_override("pressed", StyleBoxVocabP)
 		$Control/NavBarTop/Back_Button.set("theme_override_colors/font_color",Color("816BB0"))
 		$Control/NavBarTop/Back_Button.set("theme_override_colors/font_pressed_color",Color("816BB0"))
 		$Control/NavBarTop/Back_Button.set("theme_override_colors/font_hover_color",Color("816BB0"))
+		$Control/QuestionControl/Label.add_theme_stylebox_override("normal", StyleBoxVocabN)
 		$Control/QuestionControl/Label.set("theme_override_colors/font_color",Color("816BB0"))
 		$Control/QuestionControl/Label.set("theme_override_colors/font_pressed_color",Color("816BB0"))
 		$Control/QuestionControl/Label.set("theme_override_colors/font_hover_color",Color("816BB0"))
+		$Control/AnswerVbox/AnswerLineEdit.add_theme_stylebox_override("normal", StyleBoxVocabN)
 		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
 		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_selected_color",Color("816BB0"))
 		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_placeholder_color",Color("816BB0"))
+		$Control/AnswerVbox/AnswerLineEdit.add_theme_stylebox_override("read_only", StyleBoxVocabN)
+		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_uneditable_color",Color("816BB0"))
+		$Control/AnswerVbox/RomajiLineEdit.add_theme_stylebox_override("normal", StyleBoxVocabN)
+		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
+		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_selected_color",Color("816BB0"))
+		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_placeholder_color",Color("816BB0"))
+		$Control/AnswerVbox/RomajiLineEdit.add_theme_stylebox_override("read_only", StyleBoxVocabN)
+		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_uneditable_color",Color("74de76"))
 		$Control/QuestionControl/Label/Label.set("theme_override_colors/font_color",Color("816BB0"))
+		$Control/SoundButton.add_theme_stylebox_override("normal", StyleBoxVocabN)
+		$Control/SoundButton.add_theme_stylebox_override("hover", StyleBoxVocabH)
+		$Control/SoundButton.add_theme_stylebox_override("pressed", StyleBoxVocabP)
 
+func _on_sound_button_pressed():
+	AudioLoader()
+	$Control/SoundButton/AudioStreamPlayer.play()
+
+func AudioLoader():
+	var test_string = str(",").join(dictCopy[0]["question"])
+	match test_string:
+		"北" :
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/Raishuu.mp3")
+		"東":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/Raishuu.mp3")
+		"南":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/Raishuu.mp3")
+		"西":
+			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/Raishuu.mp3")
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Level_Menu.tscn")
+
 
 
 func _on_label_gui_input(event):
@@ -287,3 +319,4 @@ func ShopMenuOpenAnimation():
 	var position = Vector2(131, 257)
 	var duration = 1
 	tween.tween_property(sprite_2d, "position", position, duration)
+

@@ -1,8 +1,8 @@
 extends CanvasLayer
 var level_buttons: Array[Control]
 var navbar_buttons: Array[Control]
-
 func _ready():
+	SetDragPosition()
 	level_buttons.assign(find_children("Level_Button_*", "Control"))
 	navbar_buttons.assign(find_children("Alpha_Button_*", "Control"))
 	_text_generator()
@@ -12,6 +12,15 @@ func _ready():
 	_text_switcher()
 	$OG/NavBarTop/Label.text = "¥" + str(SaveGame.Coins)
 
+func SetDragPosition():
+	if DictionaryData.GameDict == 1:
+		$OG/ScrollContainer2.scroll_vertical = SaveGame.ScrollPositionValue1
+	if DictionaryData.GameDict == 2:
+		$OG/ScrollContainer2.scroll_vertical = SaveGame.ScrollPositionValue2
+	if DictionaryData.GameDict == 3:
+		$OG/ScrollContainer2.scroll_vertical = SaveGame.ScrollPositionValue3
+	if DictionaryData.GameDict == 4:
+		$OG/ScrollContainer2.scroll_vertical = SaveGame.ScrollPositionValue4
 
 func _unlock_level():
 	if SaveGame.HiraCheck1 == false and DictionaryData.ColorDict == 1:

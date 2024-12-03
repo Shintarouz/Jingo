@@ -4,6 +4,11 @@ var Coins : int
 var EXP : int
 var PlayerLevel : int
 
+var ScrollPositionValue1 : int
+var ScrollPositionValue2 : int
+var ScrollPositionValue3 : int
+var ScrollPositionValue4 : int
+
 var ProgressBarValue1 : int
 var ProgressBarValue2 : int
 var ProgressBarValue3 : int
@@ -71,12 +76,18 @@ func _ready():
 	Coins = Data.Coins
 	EXP = Data.EXP
 	PlayerLevel = Data.PlayerLevel
-	TutorialCheck1 = Data.TutorialCheck1
+
+	ScrollPositionValue1 = Data.ScrollPositionValue1
+	ScrollPositionValue2 = Data.ScrollPositionValue2
+	ScrollPositionValue3 = Data.ScrollPositionValue3
+	ScrollPositionValue4 = Data.ScrollPositionValue4
 	
 	ProgressBarValue1 = Data.ProgressBarValue1
 	ProgressBarValue2 = Data.ProgressBarValue2
 	ProgressBarValue3 = Data.ProgressBarValue3
 	ProgressBarValue4 = Data.ProgressBarValue4
+
+	TutorialCheck1 = Data.TutorialCheck1
 
 	HiraCheck1 = Data.HiraCheck1
 	HiraCheck2 = Data.HiraCheck2
@@ -130,7 +141,12 @@ func save():
 		"Coins" : Coins,
 		"EXP" : EXP,
 		"PlayerLevel" : PlayerLevel,
-		
+
+		"ScrollPositionValue1" : ScrollPositionValue1,
+		"ScrollPositionValue2" : ScrollPositionValue2,
+		"ScrollPositionValue3" : ScrollPositionValue3,
+		"ScrollPositionValue4" : ScrollPositionValue4,
+
 		"ProgressBarValue1" : ProgressBarValue1,
 		"ProgressBarValue2" : ProgressBarValue2,
 		"ProgressBarValue3" : ProgressBarValue3,
@@ -210,6 +226,11 @@ func _on_reset_pressed():
 	ProgressBarValue2 = 0
 	ProgressBarValue3 = 0
 	ProgressBarValue4 = 0
+
+	ScrollPositionValue1 = 0
+	ScrollPositionValue2 = 0
+	ScrollPositionValue3 = 0
+	ScrollPositionValue4 = 0
 
 	TutorialCheck1 = false
 

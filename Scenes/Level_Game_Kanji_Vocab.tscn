@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ewltcxyaa6i3"]
+[gd_scene load_steps=13 format=3 uid="uid://ewltcxyaa6i3"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Game_Kanji_Vocab.gd" id="1_x06k5"]
 [ext_resource type="PackedScene" uid="uid://b78h2t3hvwijs" path="res://Scenes/background.tscn" id="2_oy05o"]
@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://beihhnorkjqc4" path="res://Assets/Tres/HiraButtons/Hira_Button_Normal.tres" id="3_s6euj"]
 [ext_resource type="StyleBox" uid="uid://dh1omg5plm4ar" path="res://Assets/Tres/KanjiButtons/Kanji_Button_Hover.tres" id="5_ye4qn"]
 [ext_resource type="StyleBox" uid="uid://mmfl0g6rrt2q" path="res://Assets/Tres/KanjiButtons/Kanji_Button_Pressed.tres" id="6_jqswd"]
+[ext_resource type="Texture2D" uid="uid://c8bf2mciyjiko" path="res://Assets/sound-off-icon-40944.png" id="7_otgok"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uhx1"]
 bg_color = Color(1, 0.482353, 0.580392, 1)
@@ -17,7 +18,7 @@ modulate_color = Color(0.972549, 0.690196, 0.823529, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lopuv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1hbi"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvacp"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_x06k5")
@@ -200,6 +201,32 @@ theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lopuv")
 placeholder_text = "\"Romaji\""
 alignment = 1
+
+[node name="SoundButton" type="Button" parent="Control"]
+offset_left = 680.0
+offset_top = 309.0
+offset_right = 880.0
+offset_bottom = 459.0
+theme_override_styles/normal = ExtResource("3_e8b4f")
+theme_override_styles/hover = ExtResource("5_ye4qn")
+theme_override_styles/pressed = ExtResource("6_jqswd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xvacp")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SoundButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = -50.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_otgok")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/SoundButton"]
 
 [node name="Label2" type="Label" parent="."]
 anchors_preset = 7
@@ -447,6 +474,7 @@ grow_vertical = 2
 theme_override_styles/panel = ExtResource("3_e8b4f")
 
 [node name="Label" type="Label" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -544,31 +572,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
-visible = false
-custom_minimum_size = Vector2(100, 100)
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -300.0
-offset_top = -1285.0
-offset_right = 300.0
-offset_bottom = -1185.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = ExtResource("3_e8b4f")
-theme_override_styles/hover = ExtResource("5_ye4qn")
-theme_override_styles/pressed = ExtResource("6_jqswd")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_l1hbi")
-text = "Continue"
-
 [connection signal="pressed" from="Control/NavBarTop/Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="text_submitted" from="Control/AnswerVbox/AnswerLineEdit" to="." method="_on_answer_line_edit_text_submitted"]
 [connection signal="text_submitted" from="Control/AnswerVbox/RomajiLineEdit" to="." method="_on_romaji_line_edit_text_submitted"]
+[connection signal="pressed" from="Control/SoundButton" to="." method="_on_sound_button_pressed"]
 [connection signal="gui_input" from="Panel/Label" to="." method="_on_label_gui_input"]
 [connection signal="gui_input" from="Panel/Label2" to="." method="_on_label_gui_input"]
 [connection signal="gui_input" from="Panel/Label3" to="." method="_on_label_gui_input"]
