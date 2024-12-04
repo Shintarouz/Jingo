@@ -10,6 +10,7 @@ func _ready():
 	_completed_level()
 	_unlock_level()
 	_text_switcher()
+	ReadyAnimations()
 	$OG/NavBarTop/Label.text = "¥" + str(SaveGame.Coins)
 
 func SetDragPosition():
@@ -652,3 +653,21 @@ func _on_back_button_pressed():
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/hiragana.tscn")
+
+func ReadyAnimations():
+	AnimationPosition("OG/NavBarTop", Vector2(0, 0), 1)
+	AnimationPosition("OG/NavBarBottom", Vector2(0, 2120), 1)
+
+func AnimationPosition(panel_path: String, target_position: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "position", target_position, duration)
+
+func AnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "scale", target_scale, duration)

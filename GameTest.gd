@@ -13,11 +13,11 @@ func _ready():
 	AudioLoader() # sets Riashuu audio mp3
 
 func ReadyAnimations():
-	PopUpAnimation("Control/NavBarTop", Vector2(0, 0), 1)
-	PopUpAnimation("Control/NavBarBottom", Vector2(0, 2120), 1)
-	PopUpAnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
-	PopInAnimation("Control/AnswerVbox", Vector2(40, 1272), 1)
-	PopUpAnimationScale("Control/SoundButton", Vector2(1, 1), 1)
+	AnimationPosition("Control/NavBarTop", Vector2(0, 0), 1)
+	AnimationPosition("Control/NavBarBottom", Vector2(0, 2120), 1)
+	AnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
+	AnimationPosition("Control/AnswerVbox", Vector2(40, 1272), 1)
+	AnimationScale("Control/SoundButton", Vector2(1, 1), 1)
 
 func _on_answer_line_edit_text_submitted(new_text):
 	if new_text != str(",").join(dictCopy[0]["answer"]):
@@ -204,35 +204,19 @@ func _menu_color_picker():
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Level_Menu.tscn")
 
-func PopUpAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
-	var panel = get_node(panel_path)
-	if panel:
-		var tween = create_tween()
-		tween.set_trans(Tween.TRANS_CIRC)
-		tween.tween_property(panel, "position", target_position, duration)
-	else:
-		print("Panel node not found at path: ", panel_path)
-
-func PopOutAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
+func AnimationPosition(panel_path: String, target_position: Vector2, duration: float = 1.0):
 	var panel = get_node(panel_path)
 	if panel:
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "position", target_position, duration)
 
-func PopUpAnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
+func AnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
 	var panel = get_node(panel_path)
 	if panel:
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(panel, "scale", target_scale, duration)
-
-func PopInAnimation(panel_path: String, target_position: Vector2, duration: float = 1.0):
-	var panel = get_node(panel_path)
-	if panel:
-		var tween = create_tween()
-		tween.set_trans(Tween.TRANS_CIRC)
-		tween.tween_property(panel, "position", target_position, duration)
 
 func FinishAnimation(panel_path: String, target_color: Color, duration: float = 1.0):
 	var panel = get_node(panel_path)

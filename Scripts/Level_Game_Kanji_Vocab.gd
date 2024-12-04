@@ -9,11 +9,13 @@ var count:int
 @onready var DiffPanel = get_node("Panel")
 
 func _ready():
-	ShopMenuOpenAnimation()
 	_first_time_check()
 	_furigana_mode()
 	_game_mode_picker()
 	_menu_color_picker()
+	
+	ReadyAnimations()
+	
 	dictCopy = dict.duplicate(true)
 	dictCopy.shuffle()
 	$Control/QuestionControl/Label/Label.text = str(", ").join(dictCopy[0]["pronoun"])
@@ -297,26 +299,46 @@ func _on_back_button_pressed():
 
 
 
-func _on_label_gui_input(event):
-	if event is InputEventMouseButton:
-		count += 1
-		print(count)
-		if count == 1:
-			$Panel/Label.text = "Welcome to Kanji level 1! + Here you will find 2 answer lines + One will need the translation and the other will require the Romaji of the word."
-		if count == 2:
-			$Panel/Label.text = "Romaji is simply using English letters for Japanese words." + "Example : ありがとう + Translation : Thank you + Romaji : Arigatou"
-		if count == 3:
-			$Panel/Label.text = "test2"
-		if count == 4:
-			$Panel/Label.text = "test3"
-		if count == 5:
-			$Panel/Label.text = "test4"
+#func _on_label_gui_input(event):
+	#if event is InputEventMouseButton:
+		#count += 1
+		#print(count)
+		#if count == 1:
+			#$Panel/Label.text = "Welcome to Kanji level 1! + Here you will find 2 answer lines + One will need the translation and the other will require the Romaji of the word."
+		#if count == 2:
+			#$Panel/Label.text = "Romaji is simply using English letters for Japanese words." + "Example : ありがとう + Translation : Thank you + Romaji : Arigatou"
+		#if count == 3:
+			#$Panel/Label.text = "test2"
+		#if count == 4:
+			#$Panel/Label.text = "test3"
+		#if count == 5:
+			#$Panel/Label.text = "test4"
+func ReadyAnimations():
+	AnimationPosition("Control/NavBarTop", Vector2(0, 0), 1)
+	AnimationPosition("Control/NavBarBottom", Vector2(0, 2120), 1)
+	AnimationScale("Control/QuestionControl", Vector2(1, 1), 1)
+	AnimationPosition("Control/AnswerVbox", Vector2(40, 1272), 1)
+	AnimationScale("Control/SoundButton", Vector2(1, 1), 1)
 
-func ShopMenuOpenAnimation():
-	var tween := create_tween()
-	tween.set_trans(Tween.TRANS_QUAD)
-	var sprite_2d = DiffPanel
-	var position = Vector2(131, 257)
-	var duration = 1
-	tween.tween_property(sprite_2d, "position", position, duration)
+func AnimationPosition(panel_path: String, target_position: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "position", target_position, duration)
 
+func AnimationScale(panel_path: String, target_scale: Vector2, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "scale", target_scale, duration)
+
+func FinishAnimation(panel_path: String, target_color: Color, duration: float = 1.0):
+	var panel = get_node(panel_path)
+	if panel:
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.tween_property(panel, "modulate", target_color, duration)
+		target_color = Color(1, 1, 1, 1)
+		tween.tween_property(panel, "modulate", target_color, duration)
