@@ -14,14 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bntx4knedgujk" path="res://Tutorials/tutorial_test.tscn" id="13_rrend"]
 [ext_resource type="StyleBox" uid="uid://bslup4t56dl24" path="res://Assets/Tres/TemplateButtons/Disabled_Button_N.tres" id="13_s1p7r"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixefr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xr8jf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q4jg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8ekj"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ofnho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_770dn"]
@@ -69,6 +61,14 @@ corner_radius_top_right = 80
 corner_radius_bottom_right = 80
 corner_radius_bottom_left = 80
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixefr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xr8jf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q4jg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8ekj"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_anjq2")
 
@@ -78,167 +78,15 @@ offset_bottom = 2400.0
 
 [node name="background" parent="OG" instance=ExtResource("2_fv2qr")]
 
-[node name="NavBarBottom" type="Panel" parent="OG"]
-custom_minimum_size = Vector2(1080, 0)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -540.0
-offset_top = -280.0
-offset_right = 540.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_styles/panel = ExtResource("4_leepn")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OG/NavBarBottom"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 280.0
-grow_horizontal = 2
-theme_override_constants/separation = 0
-
-[node name="Control" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
-custom_minimum_size = Vector2(270, 0)
-layout_mode = 2
-
-[node name="Alpha_Button_1" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = ExtResource("5_lh7x1")
-theme_override_styles/hover = ExtResource("6_44qk6")
-theme_override_styles/pressed = ExtResource("7_x2jei")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ixefr")
-text = "あ"
-
-[node name="Control2" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
-custom_minimum_size = Vector2(270, 0)
-layout_mode = 2
-
-[node name="Alpha_Button_2" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control2"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = ExtResource("5_lh7x1")
-theme_override_styles/hover = ExtResource("6_44qk6")
-theme_override_styles/pressed = ExtResource("7_x2jei")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xr8jf")
-text = "ア"
-
-[node name="Control3" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
-custom_minimum_size = Vector2(270, 0)
-layout_mode = 2
-
-[node name="Alpha_Button_3" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control3"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = ExtResource("5_lh7x1")
-theme_override_styles/hover = ExtResource("6_44qk6")
-theme_override_styles/pressed = ExtResource("7_x2jei")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2q4jg")
-text = "漢字"
-
-[node name="Control4" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
-custom_minimum_size = Vector2(270, 0)
-layout_mode = 2
-
-[node name="Alpha_Button_4" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control4"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = ExtResource("5_lh7x1")
-theme_override_styles/hover = ExtResource("6_44qk6")
-theme_override_styles/pressed = ExtResource("7_x2jei")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_c8ekj")
-text = "語彙"
-
 [node name="NavBarTop" type="Panel" parent="OG"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -540.0
+offset_top = -246.0
 offset_right = 540.0
-offset_bottom = 240.0
+offset_bottom = -6.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -325,7 +173,7 @@ anchor_bottom = 0.873333
 offset_left = -180.0
 offset_top = 79.9999
 offset_right = 180.0
-offset_bottom = 24.001
+offset_bottom = 297.001
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_770dn")
@@ -1150,13 +998,163 @@ theme_override_styles/disabled = ExtResource("13_s1p7r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yni15")
 text = "わ"
 
+[node name="NavBarBottom" type="Panel" parent="OG"]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = 11.0
+offset_right = 540.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("4_leepn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OG/NavBarBottom"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 280.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_1" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ixefr")
+text = "あ"
+
+[node name="Control2" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_2" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xr8jf")
+text = "ア"
+
+[node name="Control3" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_3" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control3"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2q4jg")
+text = "漢字"
+
+[node name="Control4" type="Control" parent="OG/NavBarBottom/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+
+[node name="Alpha_Button_4" type="Button" parent="OG/NavBarBottom/HBoxContainer/Control4"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_focus_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.776471, 0.741176, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = ExtResource("5_lh7x1")
+theme_override_styles/hover = ExtResource("6_44qk6")
+theme_override_styles/pressed = ExtResource("7_x2jei")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c8ekj")
+text = "語彙"
+
 [node name="TutorialTest" parent="." instance=ExtResource("13_rrend")]
 visible = false
 
-[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control/Alpha_Button_1" to="." method="_on_hiragana_button_pressed"]
-[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control2/Alpha_Button_2" to="." method="_on_katakana_button_pressed"]
-[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control3/Alpha_Button_3" to="." method="_on_kanji_button_pressed"]
-[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control4/Alpha_Button_4" to="." method="_on_vocab_button_pressed"]
 [connection signal="pressed" from="OG/NavBarTop/Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Level_Button_1" to="." method="_on_level_button_1_pressed"]
 [connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_1/Button" to="." method="_on_button_pressed"]
@@ -1180,3 +1178,7 @@ visible = false
 [connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_18/Level_Button_8" to="." method="_on_level_button_8_pressed"]
 [connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_19/Level_Button_9" to="." method="_on_level_button_9_pressed"]
 [connection signal="pressed" from="OG/ScrollContainer2/VBoxContainer/Empty_Node_20/Level_Button_10" to="." method="_on_level_button_10_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control/Alpha_Button_1" to="." method="_on_hiragana_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control2/Alpha_Button_2" to="." method="_on_katakana_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control3/Alpha_Button_3" to="." method="_on_kanji_button_pressed"]
+[connection signal="pressed" from="OG/NavBarBottom/HBoxContainer/Control4/Alpha_Button_4" to="." method="_on_vocab_button_pressed"]
