@@ -655,7 +655,7 @@ func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/hiragana.tscn")
 
 func ReadyAnimations():
-	AnimationPosition("OG/NavBarTop", Vector2(0, 0), 1)
+	AnimationScale("OG/NavBarTop", Vector2(1, 1), 1)
 	AnimationPosition("OG/NavBarBottom", Vector2(0, 2120), 1)
 
 func AnimationPosition(panel_path: String, target_position: Vector2, duration: float = 1.0):
