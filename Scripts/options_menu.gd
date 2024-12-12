@@ -3,7 +3,7 @@ extends Node2D
 func _ready():
 	_button_checker()
 	_furigana_checker()
-\
+
 func _button_checker():
 	if DictionaryData.RomajiOption == true:
 		$Control2/VBoxContainer/Control2/HBoxContainer/OnButton.modulate = Color(0, 1, 0)

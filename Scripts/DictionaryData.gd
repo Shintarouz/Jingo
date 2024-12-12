@@ -418,6 +418,8 @@ var kata_wanwo = [
 		"answer" : ["wo"]
 	}]
 
+
+
 var test = [
 	{
 		"question": "会う",
@@ -1770,100 +1772,482 @@ var time = [
 		"pronoun": [""],
 		"romaji": [""],
 		"translation": [""]
-	},
+	}]
 
-	]
-
-var JLPTN5 = [
+var kanji_numbers = [
 	{
-		"question":["浴びる"],
-		"pronoun": ["あびる"],
-		"romaji": ["abiru"],
-		"translation": ["to bathe", "to shower"]
+		"kanji": ["一"],
+		"furigana": ["いち"],
+		"romaji": ["ichi"],
+		"translation": ["one"]
 	},
 	{
-		"question":["危ない"],
-		"pronoun": ["あぶない"],
-		"romaji": ["abunai"],
-		"translation": ["dangerous"]
+		"kanji": ["二"],
+		"furigana": ["に"],
+		"romaji": ["ni"],
+		"translation": ["two"]
 	},
 	{
-		"question":["あっち"],
-		"pronoun": ["あっち"],
-		"romaji": ["acchi"],
-		"translation": ["over there"]
+		"kanji": ["三"],
+		"furigana": ["さん"],
+		"romaji": ["san"],
+		"translation": ["three"]
 	},
 	{
-		"question":["あちら"],
-		"pronoun": ["あちら"],
-		"romaji": ["achira"],
-		"translation": ["there"]
+		"kanji": ["四"],
+		"furigana": ["よん / し"],
+		"romaji": ["yon","shi"],
+		"translation": ["four"]
 	},
 	{
-		"question":["上げる"],
-		"pronoun": ["あげる"],
-		"romaji": ["ageru"],
-		"translation": ["to raise","to elevate","to give"]
+		"kanji": ["五"],
+		"furigana": ["ご"],
+		"romaji": ["go"],
+		"translation": ["five"]
 	},
 	{
-		"question":["赤"],
-		"pronoun": ["あか"],
-		"romaji": ["aka"],
-		"translation": ["red"]
+		"kanji": ["六"],
+		"furigana": ["ろく"],
+		"romaji": ["roku"],
+		"translation": ["six"]
 	},
 	{
-		"question":["赤い"],
-		"pronoun": ["あかい"],
-		"romaji": ["akai"],
-		"translation": ["red"]
+		"kanji": ["七"],
+		"furigana": ["なな / しち"],
+		"romaji": ["nana","shichi"],
+		"translation":["seven"]
 	},
 	{
-		"question":["開ける"],
-		"pronoun": ["あける"],
-		"romaji": ["akeru"],
-		"translation": ["to unlock","to unwrap","to open"]
+		"kanji": ["八"],
+		"furigana": ["はち"],
+		"romaji": ["hachi"],
+		"translation": ["eight"]
 	},
 	{
-		"question":["秋"],
-		"pronoun": ["あき"],
-		"romaji": ["aki"],
-		"translation": ["autumn","fall"]
+		"kanji": ["九"],
+		"furigana": ["きゅう / く"],
+		"romaji": ["kyuu","ku"],
+		"translation": ["nine"]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": ["十"],
+		"furigana": ["じゅう"],
+		"romaji": ["juu"],
+		"translation": ["ten"]
+	},
+	{
+		"kanji": ["千"],
+		"furigana": ["せん"],
+		"romaji": ["sen"],
+		"translation": ["thousand"]
+	},
+	{
+		"kanji": ["百"],
+		"furigana": ["ひゃく"],
+		"romaji" : ["hyaku"],
+		"translation": ["hundred"]
+	},
+	{
+		"kanji": ["万"],
+		"furigana": ["まん"],
+		"romaji": ["man"],
+		"translation": ["ten thousand"]
+	},
+	{
+		"kanji": ["億"],
+		"furigana": ["おく"],
+		"romaji": ["oku"],
+		"translation": ["one hundred million"]
+	}]
+var kanji_weeks = [
+	{
+		"kanji": ["日"],
+		"furigana": ["にち","ひ"],
+		"romaji": ["nichi","hi"],
+		"translation": ["day","sun"]
+	},
+	{
+		"kanji": ["月"],
+		"furigana": ["げつ","つき"],
+		"romaji": ["getsu","tsuki"],
+		"translation": ["month","moon"]
+	},
+	{
+		"kanji": ["火"],
+		"furigana": ["か"],
+		"romaji": ["ka"],
+		"translation": ["fire"]
+	},
+	{
+		"kanji": ["水"],
+		"furigana": ["すい","みず"],
+		"romaji": ["sui","mizu"],
+		"translation": ["water"]
+	},
+	{
+		"kanji": ["木"],
+		"furigana": ["もく"],
+		"romaji": ["moku"],
+		"translation": ["tree"]
+	},
+	{
+		"kanji": ["金"],
+		"furigana": ["きん"],
+		"romaji": ["kin"],
+		"translation": ["gold","money"]
+	},
+	{
+		"kanji": ["土"],
+		"furigana": ["ど"],
+		"romaji": ["do"],
+		"translation": ["earth","soil"]
+	},
+	{
+		"kanji": ["年"],
+		"furigana": ["ねん"],
+		"romaji": ["nen"],
+		"translation": ["year"]
+	},
+	{
+		"kanji": ["時"],
+		"furigana": ["じ"],
+		"romaji": ["ji"],
+		"translation": ["time"]
+	}]
+var kanji_directions = [
+	{
+		"kanji": ["上"],
+		"furigana": ["うえ"],
+		"romaji": ["ue"],
+		"translation": ["up"]
+	},
+	{
+		"kanji": ["下"],
+		"furigana": ["した"],
+		"romaji": ["shita"],
+		"translation": ["down"]
+	},
+	{
+		"kanji": ["中"],
+		"furigana": ["なか"],
+		"romaji": ["naka"],
+		"translation": ["inside","middle"]
+	},
+	{
+		"kanji": ["外"],
+		"furigana": ["そと"],
+		"romaji": ["soto"],
+		"translation": ["outside"]
+	},
+	{
+		"kanji": ["右"],
+		"furigana": ["みぎ"],
+		"romaji": ["migi"],
+		"translation": ["right"]
+	},
+	{
+		"kanji": ["左"],
+		"furigana": ["ひだり"],
+		"romaji": ["hidari"],
+		"translation": ["left"]
+	},
+	{
+		"kanji": ["東"],
+		"furigana": ["ひがし"],
+		"romaji": ["higashi"],
+		"translation": ["east"]
+	},
+	{
+		"kanji": ["西"],
+		"furigana": ["にし"],
+		"romaji": ["nishi"],
+		"translation": ["west"]
+	},
+	{
+		"kanji": ["南"],
+		"furigana": ["みなみ"],
+		"romaji": ["minami"],
+		"translation": ["south"]
+	},
+	{
+		"kanji": ["北"],
+		"furigana": ["きた"],
+		"romaji": ["kita"],
+		"translation": ["north"]
+	}]
+var kanji_people =  [
+	{
+		"kanji": ["人"],
+		"furigana": ["ひと"],
+		"romaji": ["hito"],
+		"translation": ["person"]
+	},
+	{
+		"kanji": ["子"],
+		"furigana": ["こ"],
+		"romaji": ["ko"],
+		"translation": ["child"]
+	},
+	{
+		"kanji": ["女"],
+		"furigana": ["おんな"],
+		"romaji": ["onna"],
+		"translation": ["woman","female"]
+	},
+	{
+		"kanji": ["男"],
+		"furigana": ["おとこ"],
+		"romaji": ["otoko"],
+		"translation": ["man","male"]
+	},
+	{
+		"kanji": ["友"],
+		"furigana": ["とも"],
+		"romaji": ["tomo"],
+		"translation": ["friend"]
+	},
+	{
+		"kanji": ["母"],
+		"furigana": ["はは"],
+		"romaji": ["haha"],
+		"translation": ["mother"]
+	},
+	{
+		"kanji": ["父"],
+		"furigana": ["ちち"],
+		"romaji": ["chichi"],
+		"translation": ["father"]
+	}]
+var kanji_verbs =  [
+	{
+		"kanji": ["見る"],
+		"furigana": ["みる"],
+		"romaji": ["miru"],
+		"translation": ["to see"]
+	},
+	{
+		"kanji": ["行く"],
+		"furigana": ["いく"],
+		"romaji": ["iku"],
+		"translation": ["to go"]
+	},
+	{
+		"kanji": ["来る"],
+		"furigana": ["くる"],
+		"romaji": ["kuru"],
+		"translation": ["to come"]
+	},
+	{
+		"kanji": ["食べる"],
+		"furigana": ["たべる"],
+		"romaji": ["taberu"],
+		"translation": ["to eat"]
+	},
+	{
+		"kanji": ["飲む"],
+		"furigana": ["のむ"],
+		"romaji": ["nomu"],
+		"translation": ["to drink"]
+	},
+	{
+		"kanji": ["言う"],
+		"furigana": ["いう"],
+		"romaji": ["iu"],
+		"translation": ["to say"]
+	},
+	{
+		"kanji": ["話す"],
+		"furigana": ["はなす"],
+		"romaji": ["hanasu"],
+		"translation": ["to talk"]
+	},
+	{
+		"kanji": ["聞く"],
+		"furigana": ["きく"],
+		"romaji": ["kiku"],
+		"translation": ["to listen"]
+	},
+	{
+		"kanji": ["出る"],
+		"furigana": ["でる"],
+		"romaji": ["deru"],
+		"translation": ["to go out"]
+	},
+	{
+		"kanji": ["入る"],
+		"furigana": ["はいる","いる"],
+		"romaji": ["hairu","iru"],
+		"translation": ["to enter"]
+	},
+	{
+		"kanji": ["立つ"],
+		"furigana": ["たつ"],
+		"romaji": ["tatsu"],
+		"translation": ["to stand"]
+	},
+	{
+		"kanji": ["書く"],
+		"furigana": ["かく"],
+		"romaji": ["kaku"],
+		"translation": ["to write"]
+	}]
+var kanji_nature =  [
+	{
+		"kanji": ["山"],
+		"furigana": ["やま"],
+		"romaji": ["yama"],
+		"translation": ["mountain"]
+	},
+	{
+		"kanji": ["川"],
+		"furigana": ["かわ"],
+		"romaji": ["kawa"],
+		"translation": ["river"]
+	},
+	{
+		"kanji": ["天"],
+		"furigana": ["てん"],
+		"romaji": ["ten"],
+		"translation": ["heaven"]
+	},
+	{
+		"kanji": ["気"],
+		"furigana": ["き"],
+		"romaji": ["ki"],
+		"translation": ["spirit","air"]
+	},
+	{
+		"kanji": ["空"],
+		"furigana": ["そら"],
+		"romaji": ["sora"],
+		"translation": ["sky","empty"]
+	}]
+var kanji_objects =  [
+	{
+		"kanji": ["車"],
+		"furigana": ["くるま"],
+		"romaji": ["kuruma"],
+		"translation": ["car"]
+	},
+	{
+		"kanji": ["問"],
+		"furigana": ["もん"],
+		"romaji": ["mon"],
+		"translation": ["gate"]
+	},
+	{
+		"kanji": ["本"],
+		"furigana": ["ほん"],
+		"romaji": ["hon"],
+		"translation": ["book"]
+	},
+	{
+		"kanji": ["学"],
+		"furigana": ["がく"],
+		"romaji": ["gaku"],
+		"translation": ["study"]
+	},
+	{
+		"kanji": ["校"],
+		"furigana": ["こう"],
+		"romaji": ["kou"],
+		"translation": ["school"]
+	}]
+var kanji_adj =  [
+	{
+		"kanji": ["小さい"],
+		"furigana": ["ちいさい"],
+		"romaji": ["chiisaii"],
+		"translation": ["small"]
+	},
+	{
+		"kanji": ["大きい"],
+		"furigana": ["おおきい"],
+		"romaji": ["ookii"],
+		"translation": ["big"]
+	},
+	{
+		"kanji": ["新しい"],
+		"furigana": ["あたらし"],
+		"romaji": ["atarashi"],
+		"translation": ["new"]
+	},
+	{
+		"kanji": ["古い"],
+		"furigana": ["ふるい"],
+		"romaji": ["furui"],
+		"translation": ["old"]
+	},
+	{
+		"kanji": ["長い"],
+		"furigana": ["ながい"],
+		"romaji": ["nagai"],
+		"translation": ["long"]
+	},
+	{
+		"kanji": ["高い"],
+		"furigana": ["たかい"],
+		"romaji": ["takai"],
+		"translation": ["expensive"]
+	}]
+var kanji_misc =  [
+	{
+		"kanji": ["円"],
+		"furigana": ["えん"],
+		"romaji": ["en"],
+		"translation": ["yen","circle"]
+	},
+	{
+		"kanji": ["名"],
+		"furigana": ["な"],
+		"romaji": ["na"],
+		"translation": ["name"]
+	},
+	{
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
 	},
 	{
-		"question":[""],
-		"pronoun": [""],
+		"kanji": [""],
+		"furigana": [""],
 		"romaji": [""],
 		"translation": [""]
-	}
-]
-
+	},
+	{
+		"kanji": [""],
+		"furigana": [""],
+		"romaji": [""],
+		"translation": [""]
+	},
+	{
+		"kanji": [""],
+		"furigana": [""],
+		"romaji": [""],
+		"translation": [""]
+	}]

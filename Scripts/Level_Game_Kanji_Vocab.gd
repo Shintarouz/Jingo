@@ -18,8 +18,8 @@ func _ready():
 	
 	dictCopy = dict.duplicate(true)
 	dictCopy.shuffle()
-	$Control/QuestionControl/Label/Label.text = str(", ").join(dictCopy[0]["pronoun"])
-	$Control/QuestionControl/Label.text = str(",").join(dictCopy[0]["question"])
+	$Control/QuestionControl/Label/Label.text = str(", ").join(dictCopy[0]["furigana"])
+	$Control/QuestionControl/Label.text = str(",").join(dictCopy[0]["kanji"])
 	if DictionaryData.RomajiOption == true:
 		$Control/AnswerVbox/RomajiLineEdit.visible = true
 	else:
@@ -38,8 +38,39 @@ func _furigana_mode():
 	if DictionaryData.FuriganaMode == false:
 		$Control/QuestionControl/Label/Label.visible = false
 
+#func _on_answer_line_edit_text_submitted(new_text):
+	#for translation in dictCopy[0]["translation"]:
+		#if new_text != translation:
+			#$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("FF0000"))
+			#await get_tree().create_timer(0.5).timeout
+			#if DictionaryData.ColorDict == 3:
+				#$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("940079"))
+			#if DictionaryData.ColorDict == 4:
+				#$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
+			#mistakes1 += 1
+			#if mistakes1 == 3:
+				#$Control/AnswerVbox/AnswerLineEdit.placeholder_text = str(",").join(dictCopy[0]["translation"])
+#
+		#if new_text == translation:
+			#$Control/AnswerVbox/AnswerLineEdit.editable = false
+			#$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("74de76"))
+			#check1 = true
+			#_answer_checker()
+
 func _on_answer_line_edit_text_submitted(new_text):
-	if new_text != str(",").join(dictCopy[0]["translation"]):
+	var is_correct = false
+	
+	for translation in dictCopy[0]["translation"]:
+		if new_text == translation:
+			is_correct = true
+			break
+	
+	if is_correct:
+		$Control/AnswerVbox/AnswerLineEdit.editable = false
+		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("74de76"))
+		check1 = true
+		_answer_checker()
+	else:
 		$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("FF0000"))
 		await get_tree().create_timer(0.5).timeout
 		if DictionaryData.ColorDict == 3:
@@ -49,16 +80,23 @@ func _on_answer_line_edit_text_submitted(new_text):
 		mistakes1 += 1
 		if mistakes1 == 3:
 			$Control/AnswerVbox/AnswerLineEdit.placeholder_text = str(",").join(dictCopy[0]["translation"])
-	for translation in dictCopy[0]["translation"]:
-		if new_text == translation:
-			$Control/AnswerVbox/AnswerLineEdit.editable = false
-			$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("74de76"))
-			check1 = true
-			_answer_checker()
+
 
 
 func _on_romaji_line_edit_text_submitted(new_text):
-	if new_text != str(",").join(dictCopy[0]["romaji"]):
+	var is_correct = false
+
+	for romaji in dictCopy[0]["romaji"]:
+		if new_text == romaji:
+			is_correct = true
+			break
+	
+	if is_correct:
+		$Control/AnswerVbox/RomajiLineEdit.editable = false
+		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("74de76"))
+		check2 = true
+		_answer_checker()
+	else:
 		$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("FF0000"))
 		await get_tree().create_timer(0.5).timeout
 		if DictionaryData.ColorDict == 3:
@@ -68,12 +106,26 @@ func _on_romaji_line_edit_text_submitted(new_text):
 		mistakes2 += 1
 		if mistakes2 == 3:
 			$Control/AnswerVbox/RomajiLineEdit.placeholder_text = str(",").join(dictCopy[0]["romaji"])
-	for romaji in dictCopy[0]["romaji"]:
-		if new_text == romaji:
-			$Control/AnswerVbox/RomajiLineEdit.editable = false
-			$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("74de76"))
-			check2 = true
-			_answer_checker()
+
+
+#func _on_romaji_line_edit_text_submitted(new_text):
+	#for romaji in dictCopy[0]["romaji"]:
+		#if new_text != romaji:
+			#$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("FF0000"))
+			#await get_tree().create_timer(0.5).timeout
+			#if DictionaryData.ColorDict == 3:
+				#$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("940079"))
+			#if DictionaryData.ColorDict == 4:
+				#$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
+			#mistakes2 += 1
+			#if mistakes2 == 3:
+				#$Control/AnswerVbox/RomajiLineEdit.placeholder_text = str(",").join(dictCopy[0]["romaji"])
+#
+		#if new_text == romaji:
+			#$Control/AnswerVbox/RomajiLineEdit.editable = false
+			#$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("74de76"))
+			#check2 = true
+			#_answer_checker()
 
 func _answer_checker():
 	if DictionaryData.RomajiOption == true:
@@ -92,8 +144,8 @@ func _answer_checker():
 				check2 = false
 				$Control/AnswerVbox/AnswerLineEdit.editable = true
 				$Control/AnswerVbox/RomajiLineEdit.editable = true
-				$Control/AnswerVbox/RomajiLineEdit.placeholder_text = "Translation"
-				$Control/AnswerVbox/AnswerLineEdit.placeholder_text = "Romaji"
+				$Control/AnswerVbox/RomajiLineEdit.placeholder_text = "Romaji"
+				$Control/AnswerVbox/AnswerLineEdit.placeholder_text = "Translation"
 				if DictionaryData.ColorDict == 3:
 					$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("940079"))
 					$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("940079"))
@@ -103,8 +155,8 @@ func _answer_checker():
 				mistakes1 = 0
 				mistakes2 = 0
 				dictCopy.remove_at(0)
-				$Control/QuestionControl/Label.text = str(", ").join(dictCopy[0]["question"])
-				$Control/QuestionControl/Label/Label.text = str(", ").join(dictCopy[0]["pronoun"])
+				$Control/QuestionControl/Label.text = str(", ").join(dictCopy[0]["kanji"])
+				$Control/QuestionControl/Label/Label.text = str(", ").join(dictCopy[0]["furigana"])
 				$Control/AnswerVbox/AnswerLineEdit.text = ""
 				$Control/AnswerVbox/RomajiLineEdit.text = ""
 	if DictionaryData.RomajiOption == false:
@@ -126,7 +178,7 @@ func _answer_checker():
 					$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
 				mistakes1 = 0
 				dictCopy.remove_at(0)
-				$Control/QuestionControl/Label.text = str(", ").join(dictCopy[0]["question"])
+				$Control/QuestionControl/Label.text = str(", ").join(dictCopy[0]["kanji"])
 				$Control/AnswerVbox/AnswerLineEdit.text = ""
 				check1 = false
 
@@ -160,47 +212,46 @@ func pgbar_adder_4(amount):
 	SaveGame.ScrollPositionValue4 += 300
 
 func _game_mode_picker():
-# TODO: moet nog verandert worden naar kanji!!
 	if DictionaryData.GameDict == 21:
-		dict = DictionaryData.NOZW
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 22:
-		dict = DictionaryData.weekdays
+		dict = DictionaryData.kanji_weeks
 	if DictionaryData.GameDict == 23:
-		dict = DictionaryData.hira_sashisuseso
+		dict = DictionaryData.kanji_directions
 	if DictionaryData.GameDict == 24:
-		dict = DictionaryData.hira_tachitsuteto
+		dict = DictionaryData.kanji_people
 	if DictionaryData.GameDict == 25:
-		dict = DictionaryData.hira_naninuneno
+		dict = DictionaryData.kanji_verbs
 	if DictionaryData.GameDict == 26:
-		dict = DictionaryData.hira_hahifuheho
+		dict = DictionaryData.kanji_nature
 	if DictionaryData.GameDict == 27:
-		dict = DictionaryData.hira_mamimumemo
+		dict = DictionaryData.kanji_objects
 	if DictionaryData.GameDict == 28:
-		dict = DictionaryData.hira_yayuyo
+		dict = DictionaryData.kanji_adj
 	if DictionaryData.GameDict == 29:
-		dict = DictionaryData.hira_rarirurero
+		dict = DictionaryData.kanji_misc
 	if DictionaryData.GameDict == 30:
-		dict = DictionaryData.hira_wanwo
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 31:
-		dict = DictionaryData.NOZW
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 32:
-		dict = DictionaryData.NOZW
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 33:
-		dict = DictionaryData.kata_sashisuseso
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 34:
-		dict = DictionaryData.kata_tachitsuteto
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 35:
-		dict = DictionaryData.kata_naninuneno
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 36:
-		dict = DictionaryData.kata_hahifuheho
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 37:
-		dict = DictionaryData.kata_mamimumemo
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 38:
-		dict = DictionaryData.kata_yayuyo
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 39:
-		dict = DictionaryData.kata_rarirurero
+		dict = DictionaryData.kanji_numbers
 	if DictionaryData.GameDict == 40:
-		dict = DictionaryData.kata_wanwo
+		dict = DictionaryData.kanji_numbers
 
 func _menu_color_picker():
 	if DictionaryData.ColorDict == 3: 
@@ -283,7 +334,7 @@ func _on_sound_button_pressed():
 	$Control/SoundButton/AudioStreamPlayer.play()
 
 func AudioLoader():
-	var test_string = str(",").join(dictCopy[0]["question"])
+	var test_string = str(",").join(dictCopy[0]["kanji"])
 	match test_string:
 		"北" :
 			$Control/SoundButton/AudioStreamPlayer.stream = load("res://Sounds/Raishuu.mp3")
