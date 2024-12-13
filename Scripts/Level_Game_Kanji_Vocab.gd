@@ -77,6 +77,7 @@ func _on_answer_line_edit_text_submitted(new_text):
 			$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("940079"))
 		if DictionaryData.ColorDict == 4:
 			$Control/AnswerVbox/AnswerLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
+		$Control/AnswerVbox/AnswerLineEdit.clear()
 		mistakes1 += 1
 		if mistakes1 == 3:
 			$Control/AnswerVbox/AnswerLineEdit.placeholder_text = str(",").join(dictCopy[0]["translation"])
@@ -103,6 +104,7 @@ func _on_romaji_line_edit_text_submitted(new_text):
 			$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("940079"))
 		if DictionaryData.ColorDict == 4:
 			$Control/AnswerVbox/RomajiLineEdit.set("theme_override_colors/font_color",Color("816BB0"))
+		$Control/AnswerVbox/RomajiLineEdit.clear()
 		mistakes2 += 1
 		if mistakes2 == 3:
 			$Control/AnswerVbox/RomajiLineEdit.placeholder_text = str(",").join(dictCopy[0]["romaji"])

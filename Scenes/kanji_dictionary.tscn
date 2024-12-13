@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://83xjwrrbo7os"]
+
+[node name="Kanji_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Kanji_1" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
+
+[node name="Kanji_2" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
+
+[node name="Kanji_3" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
+
+[node name="Kanji_4" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
+
+[node name="Kanji_5" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
